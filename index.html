@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allfinno</title>
+
+    <link rel="icon" type="image/png" href="/images/logo.png">
+
+    <!-- Bootstrap CSS CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icon CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- jQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="canonical" href="https://VConnect.in/" />
+  </head>
+
+  <body style="background-size: cover; background-position: center; background-repeat: no-repeat;">
+   
+<!-- Clean Modern Navbar -->
+<nav class="topbar">
+  <div class="topbar-container">
+    <a href="index.html" class="topbar-logo">
+      <img src="images/logo.png" alt="Logo" />
+      <span>Allfinno Capital Solutions</span>
+    </a>
+
+    <div class="nav-box">
+      <ul class="topbar-links">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="bi bi-person-lines-fill"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">
+            <i class="bi bi-tools"></i>
+            <span>Services</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="careers.html">
+            <i class="bi bi-briefcase-fill"></i>
+            <span>Careers</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bi bi-envelope-paper-fill"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="contact.html" class="topbar-cta">Let's Connect</a>
+  </div>
+</nav>
+
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>Welcome to <br /><span class="highlight">Allfinno Capital</span></h1>
+      <h2 class="typed-text">Debt Recovery Solutions</h2>
+      <p>
+        We bring smarter debt recovery & client support with tech-driven automation and human expertise.
+      </p>
+      <a href="contact.html" class="cta-button">Let’s Connect</a>
+    </div>
+  </section>
+  
+
+
+<!-- Services Section -->
+<section class="ribbon-services">
+  <div class="wrap-title">
+    <div class="title-area text-align-center">
+      <h3 class="main-title">Our Services</h3>
+      <p class="subtitle">Delivering specialized financial solutions tailored to empower your business and personal financial goals.</p>
+    </div>
+
+    <div class="ribbon-list">
+      <div class="ribbon-item" onclick="redirectToServices()">
+        <h4 class="ribbon-heading">Corporate Debt Solutions</h4>
+        <p class="ribbon-desc">Customized strategies to resolve corporate debt efficiently and improve cash flow cycles.</p>
+        <ul>
+          <li>Tailored B2B Recovery Models</li>
+          <li>Documentation & Legal Coordination</li>
+          <li>Advanced Business Investigations</li>
+        </ul>
+      </div>
+
+      <div class="ribbon-item" onclick="redirectToServices()">
+        <h4 class="ribbon-heading">Consumer Collection Services</h4>
+        <p class="ribbon-desc">Customer-friendly approaches to recover individual debts while preserving brand value.</p>
+        <ul>
+          <li>Polite & Professional Engagement</li>
+          <li>Flexible Repayment Structuring</li>
+          <li>Strict Regulatory Compliance</li>
+        </ul>
+      </div>
+
+      <div class="ribbon-item" onclick="redirectToServices()">
+        <h4 class="ribbon-heading">Credit Health Improvement</h4>
+        <p class="ribbon-desc">Empowering clients to rebuild and manage a strong credit profile for a better future.</p>
+        <ul>
+          <li>Personalized Credit Analysis</li>
+          <li>Dispute & Rectification Handling</li>
+          <li>Education on Financial Behavior</li>
+        </ul>
+      </div>
+
+      <div class="ribbon-item" onclick="redirectToServices()">
+        <h4 class="ribbon-heading">Auto Finance Recovery</h4>
+        <p class="ribbon-desc">Specialized services in recovering delinquent vehicle loans with full legal backing.</p>
+        <ul>
+          <li>Vehicle Recovery & Coordination</li>
+          <li>Legal Filing & Case Handling</li>
+          <li>Collateral Tracking Services</li>
+        </ul>
+      </div>
+
+      <div class="ribbon-item" onclick="redirectToServices()">
+        <h4 class="ribbon-heading">Financial Risk Advisory</h4>
+        <p class="ribbon-desc">Helping organizations minimize credit exposure and maintain financial stability.</p>
+        <ul>
+          <li>Credit Risk Forecasting</li>
+          <li>Risk Management Frameworks</li>
+          <li>Strategic Financial Planning</li>
+        </ul>
+      </div>
+
+      <div class="ribbon-item" onclick="redirectToServices()">
+        <h4 class="ribbon-heading">Legal & Compliance Support</h4>
+        <p class="ribbon-desc">Comprehensive legal guidance for debt issues, regulatory audits, and contractual matters.</p>
+        <ul>
+          <li>Legal Case Consultations</li>
+          <li>Compliance Strategy Development</li>
+          <li>Business Contract Support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Read More Button -->
+    <div class=".read-more-btn text-center">
+      <a href="services.html" class="about-read-more"><span>More Services</span></a>
+    </div>
+  </body>
+</section>
+
+<script>
+  function redirectToServices() {
+    window.location.href = 'services.html';
+  }
+</script>
+
+<section class="about-vconnect">
+  <div class="about-container">
+    <div class="about-intro">
+      <h1>About <span>Allfinno</span></h1>
+      <p>
+        We’re not your typical BPO. At Allfinno Capital, we blend human brilliance with tech efficiency to power voice, chat, and recovery processes for tomorrow's enterprises.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To empower businesses with scalable, tech-driven customer engagement that feels personal, responsive, and results-focused.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="icon">🚀</div>
+        <h3>What We Do</h3>
+        <p>We provide smart solutions in telecalling, email support, semi-voice services, and debt collection—backed by AI and analytics.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="icon">💡</div>
+        <h3>Why Us</h3>
+        <p>Agile teams, real-time dashboards, tailored services, and 24/7 reliability. We grow with your goals.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="icon">📈</div>
+        <h3>Our Impact</h3>
+        <p>10M+ calls made. ₹50 Cr+ recovered. 30+ clients served. But we’re just getting started.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="icon">🛠️</div>
+        <h3>How We Work</h3>
+        <p>We integrate automation with human expertise, using cloud tools and agile processes to ensure efficiency, quality, and transparency at every step.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="icon">🤝</div>
+        <h3>Our Promise</h3>
+        <p>We partner, not just provide. Your growth is our priority — and we're committed to delivering reliable service with measurable results.</p>
+      </div>
+    </div>
+
+    <div class="about-footer">
+      <p>Curious to learn more about how we work?</p>
+      <a href="about.html" class="about-read-more1">More About</a>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements" class="achievements-section section">
+  <div class="container" data-aos="fade-up">
+    <div class="heading text-center">
+      <h3>Our Achievements</h3>
+      <p class="section-subtitle">
+        A glimpse at our milestones and growing impact.
+      </p>
+    </div>
+
+    <div class="stats-wrapper">
+      <div class="stat">
+        <h2 class="counter" data-target="1500">0</h2>
+        <span>Clients Served</span>
+      </div>
+      <div class="stat">
+        <h2 class="counter" data-target="98">0</h2>
+        <span>Client Satisfaction (%)</span>
+      </div>
+      <div class="stat">
+        <h2 class="counter" data-target="200000">0</h2>
+        <span>Calls Handled</span>
+      </div>
+      <div class="stat">
+        <h2 class="counter" data-target="120">0</h2>
+        <span>Projects Delivered</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const counters = document.querySelectorAll(".counter");
+  const achievementsSection = document.querySelector("#achievements");
+
+  // Function to animate counters
+  function animateCounters() {
+    counters.forEach(counter => {
+      counter.innerText = '0'; // reset counter before counting again
+
+      const target = +counter.getAttribute("data-target");
+      const speed = 80;
+
+      const updateCount = () => {
+        const current = +counter.innerText;
+        const increment = target / speed;
+
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+
+      updateCount();
+    });
+  }
+
+  // Intersection Observer to detect visibility
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+        }
+      });
+    },
+    { threshold: 0.6 } // Trigger when 60% of the section is visible
+  );
+
+  observer.observe(achievementsSection);
+</script>
+<!-- Expertise Showcase Section Ends -->
+
+<!-- Contact Section Starts -->
+<section class="vconnect-contact-wrapper" id="contact">
+  <div class="vconnect-contact-intro">
+    <p class="vconnect-contact-small">Let’s Talk</p>
+    <h2 class="vconnect-contact-heading">We’d Love to Hear From You</h2>
+    <p class="vconnect-contact-desc">
+      Reach out for collaboration, queries, or a simple hello.
+    </p>
+  </div>
+
+  <div class="vconnect-contact-grid">
+    <div class="vconnect-contact-info">
+      <div class="vconnect-info-item">
+        <span class="vconnect-info-label">Address:</span>
+        <span class="vconnect-info-text">862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, Bengaluru, 560095</span>
+      </div>
+      <div class="vconnect-info-item">
+        <span class="allfinno-info-label">Email:</span>
+        <a href="mailto:allfinnocapital@gmail.com" class="vconnect-info-text">allfinnocapital@gmail.com</a>
+      </div>
+      <div class="vconnect-info-item">
+        <span class="vconnect-info-label">Website:</span>
+        <a href="https://vconnectit.in" target="_blank" class="vconnect-info-text">www.allfinno.com</a>
+      </div>
+    </div>
+
+    <form id="contactForm" action="process_contact.php" method="POST" class="vconnect-contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <input type="text" id="mobile" name="mobile" placeholder="Mobile Number" pattern="\d{10}" required />
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<!-- Contact Section Ends -->
+
+
+  <!-- Success Dialog Box -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Thank you for contacting us! Your details have been successfully submitted.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize EmailJS
+    emailjs.init("Xm1izpSwH-ERKRusj");
+
+    // JavaScript for form submission
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Get form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const mobile = document.getElementById("mobile").value;
+      const message = document.getElementById("message").value;
+
+      // EmailJS email parameters
+      const emailParams = {
+        from_name: name,
+        email: email,
+        mobile: mobile,
+        message: message,
+      };
+
+      // Send email using EmailJS
+      emailjs
+        .send("service_vgkp7hc", "template_pwwex38", emailParams)
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            // Show success dialog box
+            var myModal = new bootstrap.Modal(document.getElementById('successModal'));
+            myModal.show();
+
+            // Reset the form after submission
+            document.getElementById("contactForm").reset(); 
+          },
+          (error) => {
+            console.error("FAILED...", error);
+            alert("There was an error submitting your details. Please try again.");
+          }
+        );
+    });
+  </script>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -100px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+
+    <!-- Back to Top Button -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+<!-- Footer Section Starts -->
+<footer class="text-center text-muted py-4">
+  <div class="footer">
+    <div class="footer-container">
+
+      <!-- Company Logo & Name -->
+      <div class="footer-brand">
+        <img
+          src="images/logo.png"
+          alt="Company Logo"
+          class="footer-logo"
+        />
+        <h3 class="pt-2" data-aos="fade-up">
+          Allfinno  
+        </h3>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="link-group d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up">
+        <a href="index.html" class="mx-2"><i class="bi bi-house-door"></i> Home</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="about.html" class="mx-2"><i class="bi bi-info-circle"></i> About</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="careers.html" class="mx-2"><i class="bi bi-briefcase"></i> Careers</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="services.html" class="mx-2"><i class="bi bi-people"></i> Services</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="contact.html" class="mx-2"><i class="bi bi-envelope"></i> Contact Us</a>
+      </div>
+
+      <!-- Footer Sections -->
+      <div class="container">
+        <div class="footer-sections">
+          <!-- Services -->
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul class="center">
+              <li><a href="telicalling.html">Telecalling</a></li>
+              <li><a href="customer_support.html">Customer Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-section">
+            <h3>Our Company</h3>
+            <ul class="center">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul class="center">
+              <li><a href="privacy_policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section contactus">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-globe"></i> <a href="https://allfinno.com" target="_blank">www.allfinno.com</a></p>
+            <p><i class="fas fa-envelope"></i><a href="mailto:allfinnocapital@gmail.com">allfinnocapital@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links mt-5" data-aos="fade-up">
+          <button class="rounded-pill instagram" onclick="visitInstagram()" title="Visit Instagram" aria-label="Visit Instagram">
+            <i class="bi bi-instagram"></i>
+          </button>
+
+          <button class="rounded-pill email" onclick="sendEmail()" title="Send Email" aria-label="Send Email">
+            <i class="bi bi-envelope"></i>
+          </button>
+
+          <button class="rounded-pill twitter" onclick="visitTwitter()" title="Visit Twitter" aria-label="Visit Twitter">
+            <i class="bi bi-twitter"></i>
+          </button>
+
+          <button class="rounded-pill linkedin" onclick="visitLinkedIn()" title="Visit LinkedIn" aria-label="Visit LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </button>
+        </div>
+
+        <hr class="footer-divider" />
+        <p class="copyright">
+          &copy; 2025 VConnect | All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Buttons Script -->
+  <script>
+    function visitInstagram() {
+      window.open("https://www.instagram.com/", "_blank");
+    }
+    function sendEmail() {
+      window.location.href = "vconnectcollection@gmail.com";
+    }
+    function visitTwitter() {
+      window.open("https://twitter.com/", "_blank");
+    }
+    function visitLinkedIn() {
+      window.open("https://www.linkedin.com/", "_blank");
+    }
+  </script>
+</footer>
+
+        <!-- JavaScript for Mobile Menu Toggle -->
+        <script>
+          document.getElementById("mobileMenuToggle").addEventListener("click", function () {
+            let navMenu = document.getElementById("navbarNav");
+            if (navMenu.classList.contains("show")) {
+              navMenu.classList.remove("show");
+            } else {
+              navMenu.classList.add("show");
+            }
+          });
+        </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS (Include Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script>
+      // WebGL Particle Background using Three.js
+      import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.136/build/three.module.js";
+
+      let scene, camera, renderer, stars, starGeo;
+
+      function init() {
+          scene = new THREE.Scene();
+          camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+          camera.position.z = 1;
+
+          renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('hero-canvas'), alpha: true });
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          document.body.appendChild(renderer.domElement);
+
+          starGeo = new THREE.Geometry();
+          for (let i = 0; i < 6000; i++) {
+              let star = new THREE.Vector3(
+                  Math.random() * 600 - 300,
+                  Math.random() * 600 - 300,
+                  Math.random() * 600 - 300
+              );
+              starGeo.vertices.push(star);
+          }
+
+          let sprite = new THREE.TextureLoader().load("https://threejs.org/examples/textures/sprites/snowflake1.png");
+          let starMaterial = new THREE.PointsMaterial({
+              color: 0xaaaaaa,
+              size: 0.7,
+              map: sprite
+          });
+
+          stars = new THREE.Points(starGeo, starMaterial);
+          scene.add(stars);
+
+          animate();
+      }
+
+      function animate() {
+          starGeo.vertices.forEach((star) => {
+              star.z += 0.2;
+              if (star.z > 300) {
+                  star.z -= 600;
+              }
+          });
+          starGeo.verticesNeedUpdate = true;
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+      }
+
+      window.addEventListener("load", init);
+
+    </script>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS File Linking -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
