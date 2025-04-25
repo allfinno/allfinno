@@ -32,7 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+// script.js
+// Wait until the entire page is loaded
+window.addEventListener('load', function() {
+    // Show the loader initially
+    document.getElementById('loader').style.display = 'flex';  // Ensure loader is visible
 
+    // Set a timeout to hide the loader after 0.5 seconds
+    setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';  // Hide loader
+        document.getElementById('content').style.display = 'block'; // Show the content
+    }, 500); // 500 milliseconds = 0.5 seconds
+});
   // ================== Sticky Navbar ====================
   const navbar = document.getElementById("navbar-top");
   if (navbar) {
