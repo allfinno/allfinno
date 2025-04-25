@@ -381,28 +381,28 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 80px 10%;
-  height: 100vh;
+  padding: 50px 10%;
+  height: 50vh;
   background-image: url("../images/hero-decor.png");
   background-size: cover;
-  background-position: center right;
+  background-position: center;
   background-repeat: no-repeat;
-  background-color: #e8f8f6;
+  background-color: #7bb8f5;
 }
 
 .hero-text {
-  max-width: 200px;
+  max-width: 100px;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #121212;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .hero-text .highlight {
-  color: rgba(8, 84, 211, 0.77);
+  color: rgba(38, 130, 237, 0.77);
 }
 
 .hero-text p {
