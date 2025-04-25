@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ================== Typing Effect ====================
 const typedText = document.querySelector('.typed-text');
 const phrases = [
+  'Debt Recovery Solutions',
   'Smart Debt Recovery',
   'Customer Support that Converts',
   'AI-powered Communication',
@@ -221,4 +222,3 @@ function erase() {
 document.addEventListener('DOMContentLoaded', () => {
   if (typedText && phrases.length) setTimeout(type, 800);
 });
-
