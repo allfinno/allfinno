@@ -17,7 +17,7 @@ body, html {
 /* Navbar Container */
 .topbar {
   position: sticky;
-  background-color: #e7f7f2;
+  background-color: rgba(217, 223, 236, 0.94);
   padding: 1rem 2rem;
   top: 0;
   z-index: 999;
@@ -42,7 +42,7 @@ body, html {
   position: sticky;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 1.5rem;
   font-weight: 700;
   color: #112f23;
@@ -57,9 +57,9 @@ body, html {
 /* Box-style nav container */
 .nav-box {
   position: sticky;
- background-color: #ffffff;
+ background-color: #6cbdf0ff;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgb(0, 0, 0);
   padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ body, html {
 
 /* Nav links */
 .topbar-links {
-  list-style: none;
+  list-style: blink;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -103,7 +103,7 @@ body, html {
 .nav-link:hover {
   font-size: 1rem;
   letter-spacing: 2px;
-  color: #00b486;
+  color: #03140f;
   transform: scale(1.05);
 }
 
@@ -114,8 +114,8 @@ body, html {
 
 /* CTA Button */
 .topbar-cta {
-  background-color: #d5f5ed;
-  color: #0a8f6c;
+  background-color: #94dafa;
+  color: #010806;
   padding: 0.6rem 1.2rem;
   border-radius: 30px;
   text-decoration: none;
@@ -123,7 +123,7 @@ body, html {
 }
 
 .topbar-cta:hover {
-  background-color: #00b486;
+  background-color: #0031ba;
   color: white;
 }
 
@@ -187,7 +187,7 @@ body, html {
 
 /* Read More Button */
 .read-more-btn {
-    background: linear-gradient(135deg, #00795f, #00bcd4);
+    background: linear-gradient(135deg, #0a35c9, #00bcd4);
     color: #fff;
     border: none;
     padding: 12px;
@@ -391,18 +391,18 @@ body, html {
 }
 
 .hero-text {
-  max-width: 550px;
+  max-width: 200px;
 }
 
 .hero-text h1 {
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #121212;
   margin-bottom: 20px;
 }
 
 .hero-text .highlight {
-  color: #00795f;
+  color: rgba(8, 84, 211, 0.77);
 }
 
 .hero-text p {
@@ -415,7 +415,7 @@ body, html {
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #00795f;
+  background-color: #0089be;
   color: #fff;
   border-radius: 25px;
   font-weight: 600;
@@ -437,7 +437,7 @@ body, html {
 }
 
 .heading small {
-  background: linear-gradient(135deg, #00795f, #00bcd4);
+  background: linear-gradient(135deg, #0089be, #00bcd4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
@@ -457,7 +457,7 @@ body, html {
 
 .expertise a {
     text-decoration: none;
-    color: #fca61f;
+    color: #046286;
 }
 
 .expertise a:hover {
@@ -527,7 +527,7 @@ body, html {
 
 /* About srction */
 :root {
-    --primary: #028285;
+    --primary: #0089be;
     --accent: #ff7b00;
     --gradient: linear-gradient(135deg, #ff7b00, #6f34fe);
     --glass-bg: rgba(255, 255, 255, 0.1);
@@ -902,7 +902,7 @@ body, html {
     
 /* Footer section starts */
 .footer {
-  background: linear-gradient(135deg, #b9ede2, #1e9a7f);
+  background: linear-gradient(0089be, rgba(18, 95, 164, 0.74), rgba(37, 109, 173, 0.85));
   backdrop-filter: blur(12px);
   color: #fff;
   padding: 20px 0;
@@ -925,14 +925,14 @@ body, html {
     margin: 0 auto;
     filter: brightness(1.8) contrast(1.2);
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(2) contrast(1.3) drop-shadow(0 0 12px #ffffff);
+    filter: brightness(2) contrast(1.3) drop-shadow(0 0 12px #0089be);
 }
 
 .footer-brand h3 {
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #0d0e0e;
+    color: #0089be;
 
     transition: text-shadow 0.3s ease;
 }
@@ -986,7 +986,7 @@ body, html {
   position: relative;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #3a254d;
+  color: #020003;
   padding-bottom: 10px;
   margin-bottom: 20px;
   display: inline-block;
@@ -1001,7 +1001,7 @@ body, html {
   width: 100%;
   background: linear-gradient(to right, #1d1e1e, #515252);
   border-radius: 5px;
-  box-shadow: 0 0 6px rgba(0, 223, 216, 0.5);
+  box-shadow: 0 0 6px rgba(0, 106, 155, 0.5);
 }
 
 
@@ -1104,7 +1104,7 @@ body, html {
 
 /* Divider */
 .footer-divider {
-    border-top: 1px solid #171717;
+    border-top: 1px solid #0089be;
     margin: 20px 0;
 }
 
@@ -1166,7 +1166,7 @@ footer p {
     right: 40px;
     display: none;
     font-size: 1.4rem;
-    background: linear-gradient(135deg, #00795f, #00bcd4);
+    background: linear-gradient(135deg, #001c79, #00bcd4);
     color: #fff;
     animation: pulse 3s infinite;
 }
@@ -1763,7 +1763,7 @@ footer p {
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(135deg, #00795f, #00bcd4);
+    background: linear-gradient(135deg, #002e79, #00d3d4);
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
@@ -1775,7 +1775,7 @@ footer p {
   }
   
   .about-read-more:hover {
-    background: linear-gradient(135deg, #00dfd8, #007cf0);
+    background: linear-gradient(135deg, #002e79, #00d3d4);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 124, 240, 0.4);
   }
@@ -1794,7 +1794,7 @@ footer p {
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(135deg, #00795f, #00bcd4);
+    background: linear-gradient(135deg, #004179, #00bcd4);
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
@@ -1991,7 +1991,7 @@ footer p {
 .stat h2 {
   font-size: 64px;
   font-weight: 800;
-  background: linear-gradient(135deg, #00795f, #00bcd4);
+  background: linear-gradient(135deg, #001379, #00bcd4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
@@ -2279,7 +2279,7 @@ footer p {
   .vconnect-info-label {
     font-weight: 700;
     font-size: 0.95rem;
-    color: #00bcd4;
+    color: #1777c1;
     margin-bottom: 0.3rem;
     letter-spacing: 0.5px;
   }
@@ -2293,7 +2293,7 @@ footer p {
   }
   
   .vconnect-info-text:hover {
-    color: #0097a7;
+    color: #2c95f2;
   }
   
   .vconnect-contact-form {
@@ -2335,7 +2335,7 @@ footer p {
   .vconnect-contact-form input:focus,
   .vconnect-contact-form textarea:focus {
     outline: none;
-    border-bottom-color: #00bcd4;
+    border-bottom-color: #0b5de3;
   }
   
   .vconnect-contact-form input:focus::placeholder,
@@ -2344,7 +2344,7 @@ footer p {
   }
   
   .vconnect-contact-form button {
-    background: linear-gradient(135deg, #00795f, #00bcd4);
+    background: linear-gradient(135deg, #0089be, #00c2d4);
     color: white;
     border: none;
     padding: 0.85rem 2rem;
