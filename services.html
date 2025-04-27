@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VConnect Services</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+
+    <!-- Bootstrap CSS CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icon CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- jQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+
+  <body style="background-size: cover; background-position: center; background-repeat: no-repeat;">
+       <!-- Clean Modern Navbar -->
+<nav class="topbar">
+  <div class="topbar-container">
+    <a href="index.html" class="topbar-logo">
+      <img src="images/company_logo.png" alt="Logo" />
+      <span>VConnect</span>
+    </a>
+
+    <div class="nav-box">
+      <ul class="topbar-links">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="bi bi-person-lines-fill"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">
+            <i class="bi bi-tools"></i>
+            <span>Services</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="careers.html">
+            <i class="bi bi-briefcase-fill"></i>
+            <span>Careers</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bi bi-envelope-paper-fill"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="contact.html" class="topbar-cta">Let's Connect</a>
+  </div>
+</nav>
+
+<section class="service-section-modern" id="service">
+  <div class="service-container">
+    <div class="service-heading text-center">
+      <h3>Our Core Expertise</h3>
+      <h4 class="sub-title">Tailored Solutions for Sustainable Financial & Legal Success</h4>
+      <p class="service-intro">
+        Unlock business growth with our all-in-one professional services.  
+        From credit advisory and collection strategies to expert legal assistance—our services are designed to protect, scale, and empower your enterprise.
+      </p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-item" data-aos="fade-up">
+        <div class="service-content">
+          <img src="images/business_to_business_debt.jpeg" alt="Corporate Debt Solutions" class="service-image" />
+          <h4>Corporate Debt Solutions</h4>
+          <p>
+            Recover unpaid invoices while maintaining professional relations.  
+            Custom negotiation tactics & legal coverage ensure optimal recovery.  
+            Protect your revenue without compromising ethics.  
+            Dedicated account managers monitor progress in real-time.
+          </p>
+        </div>
+        <button class="btn-gradient" onclick="openModal('popup1')">Learn More</button>
+      </div>
+
+      <div class="service-item" data-aos="fade-up">
+        <div class="service-content">
+          <img src="images/business_to_consumer_debt.jpeg" alt="Consumer Collection Services" class="service-image" />
+          <h4>Consumer Collection Services</h4>
+          <p>
+            Increase recovery rates while safeguarding brand image.  
+            We focus on customer respect and compliance.  
+            Tailored outreach using digital platforms.  
+            Adaptive strategy per customer profile.
+          </p>
+        </div>
+        <button class="btn-gradient" onclick="openModal('popup2')">Learn More</button>
+      </div>
+
+      <div class="service-item" data-aos="fade-up">
+        <div class="service-content">
+          <img src="images/credit_score_repair.jpeg" alt="Credit Health Improvement" class="service-image" />
+          <h4>Credit Health Improvement</h4>
+          <p>
+            Dispute credit inaccuracies with expert help.  
+            Improve credit scores through legal and advisory support.  
+            Financial education sessions included.  
+            Results-focused and ethical approach.
+          </p>
+        </div>
+        <button class="btn-gradient" onclick="openModal('popup3')">Learn More</button>
+      </div>
+
+      <div class="service-item" data-aos="fade-up">
+        <div class="service-content">
+          <img src="images/vehicle_loan_recovery.jpeg" alt="Auto Finance Recovery" class="service-image" />
+          <h4>Auto Finance Recovery</h4>
+          <p>
+            Ethical recovery of auto loans with full documentation.  
+            On-ground repossession support and borrower coordination.  
+            Minimize asset loss and financial risk.  
+            Tailored support for banks, NBFCs & lenders.
+          </p>
+        </div>
+        <button class="btn-gradient" onclick="openModal('popup4')">Learn More</button>
+      </div>
+
+      <div class="service-item" data-aos="fade-up">
+        <div class="service-content">
+          <img src="images/credit_risk_consultation.jpeg" alt="Financial Risk Advisory" class="service-image" />
+          <h4>Financial Risk Advisory</h4>
+          <p>
+            Manage credit risk with real-time data insights.  
+            Protect your cashflow and profitability.  
+            Internal policy building and credit scoring models.  
+            Prevent bad debts with proactive strategies.
+          </p>
+        </div>
+        <button class="btn-gradient" onclick="openModal('popup5')">Learn More</button>
+      </div>
+
+      <div class="service-item" data-aos="fade-up">
+        <div class="service-content">
+          <img src="images/legal_consultation.png" alt="Legal & Compliance Support" class="service-image" />
+          <h4>Legal & Compliance Support</h4>
+          <p>
+            Full-spectrum legal guidance for your business.  
+            Regulatory audits, debt litigation & compliance reporting.  
+            Tailored to your industry and local jurisdiction.  
+            Always stay protected and legally sound.
+          </p>
+        </div>
+        <button class="btn-gradient" onclick="openModal('popup6')">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup Modals -->
+<div id="popup1" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal('popup1')">&times;</span>
+    <h2>Corporate Debt Solutions</h2>
+    <p>
+      We offer structured B2B debt recovery that maintains business relationships.  
+      Our legal experts ensure all actions are compliant.  
+      Dedicated specialists assess each case individually.  
+      Clients receive weekly recovery reports.  
+      Let us help you recover faster, smoother, and smarter.
+    </p>
+  </div>
+</div>
+
+<div id="popup2" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal('popup2')">&times;</span>
+    <h2>Consumer Collection Services</h2>
+    <p>
+      We approach every consumer case with empathy and professionalism.  
+      Our digital tools help optimize outreach campaigns.  
+      We follow RBI and consumer protection regulations.  
+      Minimize charge-offs while preserving customer trust.  
+      Flexible fee models based on recovery value.
+    </p>
+  </div>
+</div>
+
+<div id="popup3" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal('popup3')">&times;</span>
+    <h2>Credit Health Improvement</h2>
+    <p>
+      We analyze credit reports and initiate structured correction workflows.  
+      Legal representation included for escalated disputes.  
+      Help clients build credit with positive tradelines.  
+      Track progress through monthly score reports.  
+      Designed for individuals, entrepreneurs & MSMEs.
+    </p>
+  </div>
+</div>
+
+<div id="popup4" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal('popup4')">&times;</span>
+    <h2>Auto Finance Recovery</h2>
+    <p>
+      Our team ensures seamless vehicle repossession.  
+      Track vehicle recovery status via dashboard.  
+      Partnered with verified field agencies across India.  
+      Recover both secured and unsecured loans.  
+      Transparent fee structure with zero hidden charges.
+    </p>
+  </div>
+</div>
+
+<div id="popup5" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal('popup5')">&times;</span>
+    <h2>Financial Risk Advisory</h2>
+    <p>
+      Leverage our deep credit analytics to shape policy.  
+      We run simulations and stress tests for debt risk.  
+      Suitable for NBFCs, startups & MSMEs.  
+      Build better internal credit rating systems.  
+      Reports with actionable insights delivered quarterly.
+    </p>
+  </div>
+</div>
+
+<div id="popup6" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal('popup6')">&times;</span>
+    <h2>Legal & Compliance Support</h2>
+    <p>
+      End-to-end legal management for collections, credit & disputes.  
+      Legal notice drafting and arbitration included.  
+      Real-time compliance audit tools provided.  
+      Prevent lawsuits and financial penalties.  
+      Our legal experts support you nationwide.
+    </p>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+window.onclick = function(event) {
+  document.querySelectorAll('.modal-overlay').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+};
+</script>
+
+<!-- Challenges We Solve Section -->
+<section id="challenges" class="challenges-section section">
+  <div class="container" data-aos="fade-up">
+    <div class="heading text-center">
+      <h3>Challenges We Solve</h3>
+      <p class="section-subtitle">
+        We help businesses overcome barriers that slow down growth and efficiency.
+      </p>
+    </div>
+
+    <div class="challenges-grid">
+      <div class="challenge-box" data-aos="fade-up" data-aos-delay="100">
+        <h4>High Call Volumes</h4>
+        <p>Struggling to handle customer inquiries efficiently? We streamline your communication.</p>
+      </div>
+      <div class="challenge-box" data-aos="fade-up" data-aos-delay="200">
+        <h4>Low Customer Retention</h4>
+        <p>Our engagement strategies help turn first-time buyers into loyal customers.</p>
+      </div>
+      <div class="challenge-box" data-aos="fade-up" data-aos-delay="300">
+        <h4>Delayed Response Times</h4>
+        <p>We implement multi-channel support systems to improve your response speed.</p>
+      </div>
+      <div class="challenge-box" data-aos="fade-up" data-aos-delay="400">
+        <h4>Inaccurate Reporting</h4>
+        <p>Gain clarity with custom dashboards and real-time analytics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vconnect-expertise mt-5" id="service">
+  <div class="expertise-container">
+    <div class="expertise-heading text-center">
+      <h3>Why Choose VConnect?</h3>
+    </div>
+
+    <div class="expertise-row">
+      <!-- Service Card 1 -->
+      <div class="expertise-col" data-aos="fade-up">
+        <div class="vconnect-card">
+          <div class="vconnect-icon">
+            <img src="images/security.png" alt="Trusted Expertise" />
+          </div>
+          <div class="vconnect-content">
+            <h4>Trusted Expertise</h4>
+            <p>We deliver reliable and efficient solutions, trusted by leading NBFCs, telecom, and internet service providers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="expertise-col" data-aos="fade-up">
+        <div class="vconnect-card">
+          <div class="vconnect-icon">
+            <img src="images/profit.png" alt="Cost-Effective Solutions" />
+          </div>
+          <div class="vconnect-content">
+            <h4>Cost-Effective Solutions</h4>
+            <p>Reduce operational costs while improving outcomes with our streamlined processes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Back to Top Button -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+<!-- Footer Section Starts -->
+<footer class="text-center text-muted py-4">
+  <div class="footer">
+    <div class="footer-container">
+
+      <!-- Company Logo & Name -->
+      <div class="footer-brand">
+        <img
+          src="images/company_logo.png"
+          alt="Company Logo"
+          class="footer-logo"
+        />
+        <h3 class="pt-2" data-aos="fade-up">
+          VConnect  
+        </h3>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="link-group d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up">
+        <a href="index.html" class="mx-2"><i class="bi bi-house-door"></i> Home</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="about.html" class="mx-2"><i class="bi bi-info-circle"></i> About</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="careers.html" class="mx-2"><i class="bi bi-briefcase"></i> Careers</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="services.html" class="mx-2"><i class="bi bi-people"></i> Services</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="contact.html" class="mx-2"><i class="bi bi-envelope"></i> Contact Us</a>
+      </div>
+
+      <!-- Footer Sections -->
+      <div class="container">
+        <div class="footer-sections">
+          <!-- Services -->
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul class="center">
+              <li><a href="telicalling.html">Telecalling</a></li>
+              <li><a href="customer_support.html">Customer Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-section">
+            <h3>Our Company</h3>
+            <ul class="center">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul class="center">
+              <li><a href="privacy_policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section contactus">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-globe"></i> <a href="https://vconnectit.in" target="_blank">www.VConnect.in</a></p>
+            <p><i class="fas fa-envelope"></i><a href="mailto:vconnectcollection@gmail.com">vconnectcollection@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</p>
+          </div>
+        </div><!-- Footer Sections -->
+     <footer class="footer-advanced">
+     <!-- Services -->
+    <div class="footer-section align-left">
+    <h4>Services</h4>
+    <ul>
+      <p><a href="#" >Telecalling</a></p>
+      <p><a href="#" >Customer Support</a></p>
+      <p><a href="#" >Email Support</a></p>
+    </ul>
+  </div>
+    <!-- Our Company -->
+    <div class="footer-section align-center-left">
+      <h4>Our Company</h4>
+    <ul>
+      <p><a href="#" >Blog</a></p>
+      <p><a href="#" >FAQ</a></p>
+      <p><a href="#" >About US</a></p>
+    </ul>
+  </div>
+    <!-- Legal -->
+    <div class="footer-section align-center-right">
+      <h4>Legal</h4>
+    <ul>
+      <p><a href="#" >Privacy Policy</a></p>
+      <p><a href="#" >Terms and Conditions</a></p>
+    </ul>
+  </div>
+    <!-- Contact US -->
+    <div class="footer-section align-right">
+      <h4>Contact US</h4>
+      <p><a href="https://allfinno.com" target="_blank">www.allfinno.com</a></p>
+      <p><a href="mailto:business@allfinno.com">business@allfinno.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block
+        <br>
+        Opp: Koramangala Indoor Stadium Back Gate,
+        <br>
+        Bengaluru, Karnataka 560095</p>
+  </div>
+      </footer>
+
+        <!-- Social Links -->
+        <div class="social-links mt-5" data-aos="fade-up">
+          <button class="rounded-pill instagram" onclick="visitInstagram()" title="Visit Instagram" aria-label="Visit Instagram">
+            <i class="bi bi-instagram"></i>
+          </button>
+
+          <button class="rounded-pill email" onclick="sendEmail()" title="Send Email" aria-label="Send Email">
+            <i class="bi bi-envelope"></i>
+          </button>
+
+          <button class="rounded-pill twitter" onclick="visitTwitter()" title="Visit Twitter" aria-label="Visit Twitter">
+            <i class="bi bi-twitter"></i>
+          </button>
+
+          <button class="rounded-pill linkedin" onclick="visitLinkedIn()" title="Visit LinkedIn" aria-label="Visit LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </button>
+        </div>
+
+        <hr class="footer-divider" />
+        <p class="copyright">
+          &copy; 2025 VConnect | All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Buttons Script -->
+  <script>
+    function visitInstagram() {
+      window.open("https://www.instagram.com/", "_blank");
+    }
+    function sendEmail() {
+      window.location.href = "vconnectcollection@gmail.com";
+    }
+    function visitTwitter() {
+      window.open("https://twitter.com/", "_blank");
+    }
+    function visitLinkedIn() {
+      window.open("https://www.linkedin.com/", "_blank");
+    }
+  </script>
+</footer>
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+      const mobileToggle = document.getElementById("mobileMenuToggle");
+      if (mobileToggle) {
+        mobileToggle.addEventListener("click", function () {
+          let navMenu = document.getElementById("navbarNav");
+          if (navMenu.classList.contains("show")) {
+            navMenu.classList.remove("show");
+          } else {
+            navMenu.classList.add("show");
+          }
+        });
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let progressBars = document.querySelectorAll(".progress-bar");
+
+        function animateProgressBars() {
+          progressBars.forEach(bar => {
+            let width = bar.getAttribute("data-width");
+            bar.style.width = width;
+          });
+        }
+
+        let expertiseSection = document.querySelector(".vconnect-expertise");
+        if (expertiseSection) {
+          let observer = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+              animateProgressBars();
+            }
+          }, { threshold: 0.5 });
+
+          observer.observe(expertiseSection);
+        }
+      });
+    </script>
+
+    <!-- AOS Library Script Initialization -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Bootstrap JS (Include Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Custom JS File Linking -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
