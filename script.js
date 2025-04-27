@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-   // Get the button
+  // Get the button
 const backToTopBtn = document.getElementById("backToTopBtn");
 
 // Show button after scrolling down 100px
