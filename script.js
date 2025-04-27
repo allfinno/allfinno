@@ -188,7 +188,7 @@ backToTopBtn.addEventListener("click", function() {
 });
 
 // ================== Typing Effect ====================
-const typedText = document.querySelector(".typed-text");
+const typedText = document.querySelector('.typed-text');
 const phrases = [
   'Debt Recovery Solutions',
   'Smart Debt Recovery',
