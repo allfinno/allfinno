@@ -188,7 +188,7 @@ backToTopBtn.addEventListener("click", function() {
 });
 
 // ================== Typing Effect ====================
-const typedText = document.querySelector('.typed-text');
+const typedText = document.querySelector(".typed-text");
 const phrases = [
   'Debt Recovery Solutions',
   'Smart Debt Recovery',
@@ -197,36 +197,39 @@ const phrases = [
   'Next-Gen BPO Solutions'
 ];
 
-let phraseIndex = 0;
-let charIndex = 0;
-let typingDelay = 100;
-let erasingDelay = 60;
-let nextPhraseDelay = 2000;
+let currentPhraseIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+let currentPhrase = "";
 
-function type() {
-  if (!typedText) return;
-  if (charIndex < phrases[phraseIndex].length) {
-    typedText.textContent += phrases[phraseIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
+function typeText() {
+  currentPhrase = phrases[currentPhraseIndex];
+
+  if (!isDeleting) {
+    // Typing effect: show characters one by one
+    typedText.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+    currentCharIndex++;
+
+    if (currentCharIndex === currentPhrase.length) {
+      // Wait before starting to delete
+      isDeleting = true;
+      setTimeout(typeText, 1000);  // Pause after full text is typed
+    }
   } else {
-    setTimeout(erase, nextPhraseDelay);
+    // Deleting effect: remove characters one by one
+    typedText.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+    currentCharIndex--;
+
+    if (currentCharIndex === 0) {
+      // Start typing next phrase
+      isDeleting = false;
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+    }
   }
+
+  // Speed of typing and deleting
+  setTimeout(typeText, isDeleting ? 50 : 150);
 }
 
-function erase() {
-  if (!typedText) return;
-  if (charIndex > 0) {
-    typedText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } else {
-    phraseIndex++;
-    if (phraseIndex >= phrases.length) phraseIndex = 0;
-    setTimeout(type, typingDelay);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  if (typedText && phrases.length) setTimeout(type, 800);
-});
+// Wait for DOM to load before starting
+document.addEventListener("DOMContentLoaded", typeText);
