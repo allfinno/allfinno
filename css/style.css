@@ -5,7 +5,28 @@ body {
   padding: 0;
   padding-top: var(--navbar-height);
 }
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 80px; /* Important: define the height */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; /* Make it fill header height */
+  padding: 0 2rem;
+}
+
+main {
+  padding-top: 100px; /* 80px + a little extra space */
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -16,38 +37,35 @@ body, html {
 /* styles.css */
 
 #loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure it's on top of other content */
-  overflow: hidden; /* Prevents any overflow */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.spinner {
-    border: 10px solid rgb(48, 145, 232);
-    border-top: 10px solid rgba(164, 232, 245, 0.27);
-    border-radius: 70%;
-    width: 100px;
-    height: 100px;
-    animation: spin 1s linear infinite;
+#loader-logo {
+  width: 120px;
+  height: auto;
+  animation: spin 3s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Animation: make logo smoothly zoom in and out */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
+
 /* Navbar Styling */
 /* Navbar Container */
 .topbar {
   position: sticky;
   background-color: rgba(217, 223, 236, 0.94);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   top: 0;
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -410,7 +428,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 50px 10%;
+  padding: 40px 10%;
   height: 80vh;
   background-image: url("../images/hero-decor.png");
   background-size: cover;
@@ -953,9 +971,9 @@ body, html {
     object-fit: contain;
     display: block;
     margin: 0 auto;
-    filter: brightness(2.5) contrast(1.2);
-    transition: transform 0.5s ease, filter 0.5s ease;
-    filter: brightness(2) contrast(1.3) drop-shadow(0 0 12px #0089be);
+    filter: brightness(2.5) contrast(2.5);
+    transition: transform 0.20s ease, filter 0.20s ease;
+    filter: brightness(2) contrast(1.3) drop-shadow(0 0 12px #06688d);
 }
 
 .footer-brand h3 {
@@ -964,7 +982,7 @@ body, html {
     letter-spacing: 4px;
     color: #0089be;
 
-    transition: text-shadow 0.3s ease;
+    transition: text-shadow 0.20s ease;
 }
 
 
@@ -989,7 +1007,7 @@ body, html {
 }
 
 .link-group a:hover {
-    color: #ffffff;
+    color: #32aef2;
 }
 
 .link-group a:hover::after {
@@ -999,84 +1017,51 @@ body, html {
 }
 
 /* Footer Sections */
-.footer-sections {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-    margin-top: 20px;
+.footer-advanced {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  background-color: rgba(255, 251, 251, 0);
+  color: #19c6f0;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.footer-section {
-    text-align: center;
-    max-width: 250px;
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
 }
 
-.footer-section h3 {
-  position: relative;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #020003;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  display: inline-block;
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.footer-section h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(to right, #1d1e1e, #515252);
-  border-radius: 5px;
-  box-shadow: 0 0 6px rgba(0, 106, 155, 0.5);
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+.footer-column li {
+  margin-bottom: 8px;
 }
 
-.footer-section ul li {
-    margin: 8px 0;
+.footer-column a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
 }
 
-.footer-section ul li a {
-    color: #171717;
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-}
-
-.footer-section ul li a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: #ffffff;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #ffffff;
-}
-
-.footer-section ul li a:hover::after {
-    width: 100%;
-    left: 0;
+.footer-column a:hover {
+  color: #7cc0ec;
 }
 
 /* Contact Section */
 .footer-section.contactus p {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     justify-content: center;
     color: #171717;
 }
@@ -1113,7 +1098,15 @@ body, html {
     text-align: center;
 }
 
-
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #ccc;
+  font-size: 14px;
+}
 /* Social Buttons */
 .social-links button {
     margin: 10px;
@@ -1158,7 +1151,10 @@ footer p {
 
 /* Social Links */
 .social-links {
-    margin-top: 20px;
+ display: flex;
+  justify-content: center; /* This centers horizontally */
+  gap: 20px; /* Space between icons */
+  margin-top: 30px;
 }
 
 .social-links button {
@@ -1190,15 +1186,29 @@ footer p {
 }
 
 /* Styling back to top button */
-#btn-back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    display: none;
-    font-size: 1.4rem;
-    background: linear-gradient(135deg, #001c79, #00bcd4);
-    color: #fff;
-    animation: pulse 3s infinite;
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Hidden by default */
+  background: linear-gradient(135deg, #59b9ef 0%, #25d6ef 100%);
+  color: #0785ad;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+/* Hover effect */
+#backToTopBtn:hover {
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  transform: scale(1.1);
 }
 
 /* Team Section Styling */
