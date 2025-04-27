@@ -187,59 +187,56 @@ backToTopBtn.addEventListener("click", function() {
   }
 });
 
-// ================== Typing Effect ====================
-const typedText = document.querySelector(".typed-text");
-const phrases = [
-  'Debt Recovery Solutions',
-  'Smart Debt Recovery',
-  'Customer Support',
-  'AI-powered Communication',
-  'Next-Gen BPO Solutions'
-];
-
-let currentPhraseIndex = 0;
-let currentCharIndex = 0;
-let isDeleting = false;
-let currentPhrase = "";
-
-let typingSpeed = 150;  // Typing speed (in ms per character)
-let deletingSpeed = 100; // Deleting speed (in ms per character)
-let delayBeforeNext = 1500; // Delay between deleting a phrase and typing the next one
-
-function typeText() {
-  currentPhrase = phrases[currentPhraseIndex];
-
-  if (!isDeleting) {
-    // Typing effect: show characters one by one
-    typedText.textContent = currentPhrase.substring(0, currentCharIndex + 1);
-    currentCharIndex++;
-
-    if (currentCharIndex === currentPhrase.length) {
-      // Wait before starting to delete the phrase
-      isDeleting = true;
-      setTimeout(typeText, delayBeforeNext);  // Delay before starting to delete
-    } else {
-      setTimeout(typeText, typingSpeed);  // Delay between typing each character
-    }
-  } else {
-    // Deleting effect: remove characters one by one
-    typedText.textContent = currentPhrase.substring(0, currentCharIndex - 1);
-    currentCharIndex--;
-
-    if (currentCharIndex === 0) {
-      // Move to the next phrase after deletion
-      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-      isDeleting = false;
-
-      // Wait before typing the next phrase (this is where we control the delay)
-      setTimeout(typeText, delayBeforeNext);  // Adds delay before typing the next phrase
-    } else {
-      setTimeout(typeText, deletingSpeed);  // Delay between deleting each character
-    }
-  }
-}
-
-// Start the typing effect after the DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(typeText, 1000);  // Adds a 1-second delay before the first phrase starts typing
-}); 
+
+  // ================== Typing Effect Function ====================
+  function typingEffect(selector, phrases, typingSpeed, deletingSpeed) {
+    const typedText = document.querySelector(selector); // Target the element with the selector
+    let currentPhraseIndex = 0;
+    let currentLetterIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+
+    function typeText() {
+      if (isDeleting) {
+        currentText = phrases[currentPhraseIndex].substring(0, currentLetterIndex);
+        currentLetterIndex--;
+      } else {
+        currentText = phrases[currentPhraseIndex].substring(0, currentLetterIndex);
+        currentLetterIndex++;
+      }
+
+      typedText.textContent = currentText;
+
+      // If the full phrase is typed, start deleting after a delay
+      if (!isDeleting && currentLetterIndex === phrases[currentPhraseIndex].length) {
+        setTimeout(() => {
+          isDeleting = true;
+        }, 1000);  // Delay before starting to delete
+      }
+
+      // If the phrase is deleted, move to the next phrase
+      if (isDeleting && currentLetterIndex === 0) {
+        isDeleting = false;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length; // Loop through phrases
+      }
+
+      setTimeout(typeText, isDeleting ? deletingSpeed : typingSpeed);
+    }
+
+    // Start the typing effect
+    typeText();
+  }
+
+  // Call the typingEffect function with the provided phrases
+  const phrases = [
+    'Debt Recovery Solutions',
+    'Smart Debt Recovery',
+    'Customer Support',
+    'AI-powered Communication',
+    'Next-Gen BPO Solutions'
+  ];
+
+  typingEffect(".typed-text", phrases, 150, 100);  // Apply to the element with class `typed-text`
+
+});
