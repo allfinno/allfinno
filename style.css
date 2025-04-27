@@ -1936,8 +1936,8 @@ footer p {
       font-size: 16px;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(45deg, #05a5ba, #25e9fc);
-      border: 2px solid #00a8c0;
+      background: linear-gradient(45deg, 05a5ba, 25e9fc);
+      border: 2px solid 00a8c0;
       border-radius: 8px;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(38, 132, 255, 0.4);
