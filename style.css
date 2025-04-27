@@ -414,6 +414,7 @@ body, html {
 
 .hero-text {
   max-width: 300px;
+  white-space: nowrap;
 }
 
 .hero-text h1 {
