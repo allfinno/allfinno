@@ -32,28 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-// script.js
-/// When page loads, hide loader and show content
-window.addEventListener("load", function() {
-  const loader = document.getElementById("loader");
-  const content = document.getElementById("content");
-
-  loader.style.display = "none";
-  content.style.display = "block";
-});
-  // ================== Sticky Navbar ====================
-  const navbar = document.getElementById("navbar-top");
-  if (navbar) {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) {
-        navbar.classList.add("fixed-top");
-        document.body.classList.add("fixed-navbar");
-      } else {
-        navbar.classList.remove("fixed-top");
-        document.body.classList.remove("fixed-navbar");
-      }
-    });
-  }
 
    // Get the button
 const backToTopBtn = document.getElementById("backToTopBtn");
