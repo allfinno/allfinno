@@ -403,7 +403,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 10%;
+  padding: 5px 5%;
   height: 80vh;
   background-image: url("../images/hero-decor.png");
   background-size: cover;
@@ -419,6 +419,7 @@ body, html {
 .hero-text h1 {
   font-size: 2.5rem;
   font-weight: 800;
+  white-space: nowrap;
   color: #121212;
   margin-bottom: 10px;
 }
@@ -426,6 +427,7 @@ body, html {
   color: #2575fc;
   font-weight: bold;
 }
+
 .hero-text .highlight {
   color: rgba(38, 130, 237, 0.77);
 }
@@ -453,9 +455,10 @@ body, html {
 }
 /* Add styles if needed */
 .typed-text {
-  color: #2575fc;
+  font-size: 2rem;
   font-weight: bold;
-  font-size: 1.5em;
+  color: #333;
+  margin: 0;
 }
 
 /* Expertise section starts */
@@ -2384,4 +2387,3 @@ footer p {
     background: linear-gradient(135deg, #3d3e3e, #b0f2fa);
     transform: translateY(-2px);
   }
-  
