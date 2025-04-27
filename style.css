@@ -2140,7 +2140,7 @@ footer p {
     min-width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #00795f;
+    background: #11b0b7;
     color: white;
     display: flex;
     justify-content: center;
@@ -2183,7 +2183,7 @@ footer p {
   .journey-submit {
     padding: 12px 30px;
     border-radius: 30px;
-    background: #00795f;
+    background: #1da1c9;
     border: none;
     color: white;
     font-weight: 600;
