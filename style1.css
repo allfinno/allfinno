@@ -1,0 +1,228 @@
+header {
+    
+    top: 0; /* Fix it at the very top */
+    left: 0; /* Start from left edge */
+    width: 100%; /* Full width */
+    background: linear-gradient(135deg, #50eaf4, rgba(7, 151, 182, 0.75));
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Sections */
+.content-box {
+    background-color: rgba(206, 239, 245, 0.24);
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(30, 138, 198, 0.63);
+}
+
+.light-bg {
+    background-color: rgba(189, 245, 244, 0.68);
+}
+
+.container1 {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(55, 207, 237, 0.21);
+    border-radius: 8px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #24bfdd;
+}
+
+.container1 h2 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid #22d1e2;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    color: #05bed8;
+}
+
+.container1 h4 {
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    color: #15a2b6;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container1 {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p, ul li {
+        font-size: 0.95rem;
+    }
+}
+
+/* CTA Button */
+.cta {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #41dadd, #19abd4);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+.blg-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #41dadd, #19abd4);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.1) translateY(-3px);
+    background: linear-gradient(135deg, #00dfd8, #007cf0);
+}
+
+.blg-button:hover {
+    transform: scale(1.1) translateY(-3px);
+    background: linear-gradient(135deg, #00dfd8, #007cf0);
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-header {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: linear-gradient(135deg, #20e9e6, #06a6c0);
+    color: black;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #00dbfe, #424343);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background: #f1f1f1;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.faq-answer ul {
+    padding-left: 20px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-question.active {
+    background: #0fb2bd;
+}
+.container1 {
+    width: 85%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #27bcdc;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
