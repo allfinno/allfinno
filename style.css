@@ -422,10 +422,6 @@ body, html {
   color: #121212;
   margin-bottom: 10px;
 }
-#typed-text {
-  color: #2575fc;
-  font-weight: bold;
-}
 .hero-text .highlight {
   color: rgba(38, 130, 237, 0.77);
 }
@@ -451,7 +447,12 @@ body, html {
 .cta-button:hover {
   background: linear-gradient(135deg, #3d3e3e, #b0f2fa);
 }
-
+/* Add styles if needed */
+.typed-text {
+  color: #2575fc;
+  font-weight: bold;
+  font-size: 1.5em;
+}
 
 /* Expertise section starts */
 .service-card .img img {
