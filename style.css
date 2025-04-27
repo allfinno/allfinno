@@ -442,7 +442,7 @@ body, html {
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #0089be;
+  background-color: #13b6c4;
   color: #fff;
   border-radius: 25px;
   font-weight: 600;
@@ -1936,8 +1936,8 @@ footer p {
       font-size: 16px;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(45deg, 05a5ba, 25e9fc);
-      border: 2px solid 00a8c0;
+      background: linear-gradient(45deg, #1182cb, #25e9fc);
+      border: 2px solid #00a8c0;
       border-radius: 8px;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(38, 132, 255, 0.4);
@@ -2387,3 +2387,4 @@ footer p {
     background: linear-gradient(135deg, #3d3e3e, #b0f2fa);
     transform: translateY(-2px);
   }
+  
