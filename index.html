@@ -7,11 +7,10 @@
     <title>Allfinno</title>
 
     <link rel="icon" type="image/png" href="/images/logo.png">
-    <!-- Loader Element -->
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-
+    <!-- Loader -->
+<div id="loader">
+  <img src="Images/logo.png" alt="Logo" id="loader-logo">
+</div>
     <!-- Your Page Content -->
     <div id="content" style="display: none;">
         </div>
@@ -52,12 +51,13 @@
 
     <!-- EmailJS Library -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <link rel="canonical" href="https://VConnect.in/" />
+    <link rel="canonical" href="https://allfinno.com/" />
   </head>
 
   <body style="background-size: cover; background-position: center; background-repeat: no-repeat;">
    
 <!-- Clean Modern Navbar -->
+        
 <nav class="topbar">
   <div class="topbar-container">
     <a href="index.html" class="topbar-logo">
@@ -101,7 +101,7 @@
     <a href="contact.html" class="topbar-cta">Let's Connect</a>
   </div>
 </nav>
-
+</header>
   <section class="hero-section">
     <div class="hero-text">
       <h1>Welcome to <br /><span class="highlight">Allfinno Capital</span></h1>
@@ -347,11 +347,11 @@
       </div>
       <div class="vconnect-info-item">
         <span class="allfinno-info-label">Email:</span>
-        <a href="mailto:allfinnocapital@gmail.com" class="vconnect-info-text">allfinnocapital@gmail.com</a>
+        <a href="mailto:business@allfinno.com" class="vconnect-info-text">allfinnocapital@gmail.com</a>
       </div>
       <div class="vconnect-info-item">
         <span class="vconnect-info-label">Website:</span>
-        <a href="https://vconnectit.in" target="_blank" class="vconnect-info-text">www.allfinno.com</a>
+        <a href="https://allfinno.com" target="_blank" class="vconnect-info-text">www.allfinno.com</a>
       </div>
     </div>
 
@@ -451,13 +451,8 @@
 
 
     <!-- Back to Top Button -->
-    <button
-      type="button"
-      class="btn btn-floating btn-lg rounded-pill"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </button>
+   <button id="backToTopBtn">&#8679;</button>
+<script src="script.js"></script>
 
 <!-- Footer Section Starts -->
 <footer class="text-center text-muted py-4">
@@ -490,45 +485,47 @@
       </div>
 
       <!-- Footer Sections -->
-      <div class="container">
-        <div class="footer-sections">
-          <!-- Services -->
-          <div class="footer-section">
-            <h3>Services</h3>
-            <ul class="center">
-              <li><a href="telicalling.html">Telecalling</a></li>
-              <li><a href="customer_support.html">Customer Support</a></li>
-            </ul>
-          </div>
-
-          <!-- Company -->
-          <div class="footer-section">
-            <h3>Our Company</h3>
-            <ul class="center">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="about.html">About Us</a></li>
-            </ul>
-          </div>
-
-          <!-- Legal -->
-          <div class="footer-section">
-            <h3>Legal</h3>
-            <ul class="center">
-              <li><a href="privacy_policy.html">Privacy Policy</a></li>
-              <li><a href="terms.html">Terms and Conditions</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div class="footer-section contactus">
-            <h3>Contact Us</h3>
-            <p><i class="fas fa-globe"></i> <a href="https://allfinno.com" target="_blank">www.allfinno.com</a></p>
-            <p><i class="fas fa-envelope"></i><a href="mailto:allfinnocapital@gmail.com">allfinnocapital@gmail.com</a></p>
-            <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</p>
-          </div>
-        </div>
-
+     <footer class="footer-advanced">
+     <!-- Services -->
+    <div class="footer-section align-left">
+    <h4>Services</h4>
+    <ul>
+      <p><a href="#" >Telecalling</a></p>
+      <p><a href="#" >Customer Support</a></p>
+      <p><a href="#" >Email Support</a></p>
+    </ul>
+  </div>
+    <!-- Our Company -->
+    <div class="footer-section align-center-left">
+      <h4>Our Company</h4>
+    <ul>
+      <p><a href="#" >Blog</a></p>
+      <p><a href="#" >FAQ</a></p>
+      <p><a href="#" >About US</a></p>
+    </ul>
+  </div>
+    <!-- Legal -->
+    <div class="footer-section align-center-right">
+      <h4>Legal</h4>
+    <ul>
+      <p><a href="#" >Privacy Policy</a></p>
+      <p><a href="#" >Terms and Conditions</a></p>
+    </ul>
+  </div>
+    <!-- Contact US -->
+    <div class="footer-section align-right">
+      <h4>Contact US</h4>
+      <p><a href="https://allfinno.com" target="_blank">www.allfinno.com</a></p>
+      <p><a href="mailto:business@allfinno.com">business@allfinno.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block
+        <br>
+        Opp: Koramangala Indoor Stadium Back Gate,
+        <br>
+        Bengaluru, Karnataka 560095</p>
+  </div>
+      </footer>
+  <!-- NEW ROW after line break -->
+  <div class="footer-bottom">
         <!-- Social Links -->
         <div class="social-links mt-5" data-aos="fade-up">
           <button class="rounded-pill instagram" onclick="visitInstagram()" title="Visit Instagram" aria-label="Visit Instagram">
@@ -550,7 +547,7 @@
 
         <hr class="footer-divider" />
         <p class="copyright">
-          &copy; 2025 VConnect | All Rights Reserved.
+          &copy; 2025 Allfinno Capital Solutions | All Rights Reserved.
         </p>
       </div>
     </div>
@@ -562,7 +559,7 @@
       window.open("https://www.instagram.com/", "_blank");
     }
     function sendEmail() {
-      window.location.href = "vconnectcollection@gmail.com";
+      window.location.href = "business@allfinno.com.com";
     }
     function visitTwitter() {
       window.open("https://twitter.com/", "_blank");
