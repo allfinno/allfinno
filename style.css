@@ -1182,7 +1182,7 @@ footer p {
 
 /* Hover Effect */
 #backToTopBtn:hover {
-  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  background: linear-gradient(135deg, #25e9fc 0%, #11b4cb 100%);
   transform: scale(1.1);
 }
 /* Team Section Styling */
