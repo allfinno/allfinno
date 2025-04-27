@@ -33,16 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 // script.js
-// Wait until the entire page is loaded
-window.addEventListener('load', function() {
-    // Show the loader initially
-    document.getElementById('loader').style.display = 'flex';  // Ensure loader is visible
+/// When page loads, hide loader and show content
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
 
-    // Set a timeout to hide the loader after 0.5 seconds
-    setTimeout(function() {
-        document.getElementById('loader').style.display = 'none';  // Hide loader
-        document.getElementById('content').style.display = 'block'; // Show the content
-    }, 500); // 500 milliseconds = 0.5 seconds
+  loader.style.display = "none";
+  content.style.display = "block";
 });
   // ================== Sticky Navbar ====================
   const navbar = document.getElementById("navbar-top");
@@ -58,17 +55,25 @@ window.addEventListener('load', function() {
     });
   }
 
-  // ================== Back to Top Button ====================
-  const backToTopButton = document.getElementById("btn-back-to-top");
-  if (backToTopButton) {
-    window.addEventListener("scroll", function () {
-      backToTopButton.style.display = window.scrollY > 20 ? "block" : "none";
-    });
+   // Get the button
+const backToTopBtn = document.getElementById("backToTopBtn");
 
-    backToTopButton.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+// Show button when scrolled down 100px
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
   }
+};
+
+// When button is clicked, scroll to top smoothly
+backToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
   // ================== About Section Scroll Animation ====================
   const aboutSection = document.querySelector("#about");
