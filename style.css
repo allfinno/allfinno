@@ -422,7 +422,10 @@ body, html {
   color: #121212;
   margin-bottom: 10px;
 }
-
+#typed-text {
+  color: #2575fc;
+  font-weight: bold;
+}
 .hero-text .highlight {
   color: rgba(38, 130, 237, 0.77);
 }
