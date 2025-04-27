@@ -47,17 +47,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ================== Back to Top Button ====================
-  const backToTopButton = document.getElementById("btn-back-to-top");
-  if (backToTopButton) {
-    window.addEventListener("scroll", function () {
-      backToTopButton.style.display = window.scrollY > 20 ? "block" : "none";
-    });
+   // Get the button
+const backToTopBtn = document.getElementById("backToTopBtn");
 
-    backToTopButton.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+// Show button after scrolling down 100px
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 100) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
   }
+});
+
+// Scroll to top smoothly when clicked
+backToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
   // ================== About Section Scroll Animation ====================
   const aboutSection = document.querySelector("#about");
@@ -180,8 +188,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ================== Typing Effect ====================
-const typedText = document.querySelector('.typed-text');
+const typedText = document.querySelector(".typed-text");
 const phrases = [
+  'Debt Recovery Solutions',
   'Smart Debt Recovery',
   'Customer Support that Converts',
   'AI-powered Communication',
