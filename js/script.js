@@ -33,6 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // ================== Sticky Navbar ====================
+  const navbar = document.getElementById("navbar-top");
+  if (navbar) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add("fixed-top");
+        document.body.classList.add("fixed-navbar");
+      } else {
+        navbar.classList.remove("fixed-top");
+        document.body.classList.remove("fixed-navbar");
+      }
+    });
+  }
+
    // Get the button
 const backToTopBtn = document.getElementById("backToTopBtn");
 
