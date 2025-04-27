@@ -403,7 +403,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 10%;
+  padding: 5px 5%;
   height: 80vh;
   background-image: url("../images/hero-decor.png");
   background-size: cover;
@@ -413,14 +413,19 @@ body, html {
 }
 
 .hero-text {
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
   font-weight: 800;
+  white-space: nowrap;
   color: #121212;
   margin-bottom: 10px;
+}
+#typed-text {
+  color: #2575fc;
+  font-weight: bold;
 }
 
 .hero-text .highlight {
@@ -437,7 +442,7 @@ body, html {
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #0089be;
+  background-color: #13b6c4;
   color: #fff;
   border-radius: 25px;
   font-weight: 600;
@@ -448,7 +453,13 @@ body, html {
 .cta-button:hover {
   background: linear-gradient(135deg, #3d3e3e, #b0f2fa);
 }
-
+/* Add styles if needed */
+.typed-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
 
 /* Expertise section starts */
 .service-card .img img {
@@ -839,7 +850,7 @@ body, html {
 
 .modal-body .content small {
     font-size: 1rem;
-    color: #6f34fe;
+    color: #2bb7f5;
 }
 
 /* Contact Section - Modern Glassmorphism Style */
@@ -1166,7 +1177,7 @@ footer p {
   bottom: 30px;
   right: 30px;
   display: none; /* Hidden by default */
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(135deg, #25e9fc 0%, #11b4cb 100%);
   color: white;
   border: none;
   outline: none;
@@ -1182,10 +1193,9 @@ footer p {
 
 /* Hover Effect */
 #backToTopBtn:hover {
-  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  background: linear-gradient(135deg, #25e9fc 0%, #11b4cb 100%);
   transform: scale(1.1);
 }
-
 /* Team Section Styling */
 .team-section .row {
     display: flex;
@@ -1890,7 +1900,7 @@ footer p {
   display: flex;
   align-items: flex-start;
   gap: 25px;
-  border-left: 4px solid #00c096;
+  border-left: 4px solid #0099c0;
   padding-left: 20px;
   transition: transform 0.3s ease;
 }
@@ -1909,7 +1919,7 @@ footer p {
 
 .service-content h4 {
   font-size: 1.5rem;
-  color: #16584e;
+  color: #106273;
   margin-bottom: 8px;
   font-weight: bolder;
 }
@@ -1922,12 +1932,12 @@ footer p {
 
 /* CTA Button Style */
 .btn-gradient {
-      padding: 14px 28px;
+      padding: 10px 20px;
       font-size: 16px;
       font-weight: bold;
       color: #fff;
-      background: linear-gradient(45deg, #6a11cb, #2575fc);
-      border: 2px solid #00c096;
+      background: linear-gradient(45deg, #1182cb, #25e9fc);
+      border: 2px solid #00a8c0;
       border-radius: 8px;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(38, 132, 255, 0.4);
@@ -2006,7 +2016,7 @@ footer p {
 .stat h2 {
   font-size: 64px;
   font-weight: 800;
-  background: linear-gradient(135deg, #001379, #00bcd4);
+  background: linear-gradient(135deg, #005379, #00bcd4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
@@ -2045,7 +2055,7 @@ footer p {
 }
 
 .challenge-box {
-  background: linear-gradient(135deg, #00795f, #00bcd4);
+  background: linear-gradient(135deg, #006579, #2ab6c8);
   padding: 30px;
   border-radius: 18px;
   color: #fff;
@@ -2130,7 +2140,7 @@ footer p {
     min-width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #00795f;
+    background: #11b0b7;
     color: white;
     display: flex;
     justify-content: center;
@@ -2173,7 +2183,7 @@ footer p {
   .journey-submit {
     padding: 12px 30px;
     border-radius: 30px;
-    background: #00795f;
+    background: #1da1c9;
     border: none;
     color: white;
     font-weight: 600;
@@ -2183,7 +2193,7 @@ footer p {
   }
   
   .journey-submit:hover {
-    background: #009e89;
+    background: #16a7c2;
   }
   
   @media (max-width: 600px) {
