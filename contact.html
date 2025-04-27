@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VConnect</title>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    
+    <!-- Bootstrap CSS CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icon CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- jQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+
+  <body style="background-size: cover; background-position: center; background-repeat: no-repeat;">
+   <!-- Clean Modern Navbar -->
+<nav class="topbar">
+  <div class="topbar-container">
+    <a href="index.html" class="topbar-logo">
+      <img src="images/logo1.png" alt="Logo" />
+    </a>
+
+    <div class="nav-box">
+      <ul class="topbar-links">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="bi bi-person-lines-fill"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">
+            <i class="bi bi-tools"></i>
+            <span>Services</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="careers.html">
+            <i class="bi bi-briefcase-fill"></i>
+            <span>Careers</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bi bi-envelope-paper-fill"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="contact.html" class="topbar-cta">Let's Connect</a>
+  </div>
+</nav>
+
+<!-- Contact Section Starts -->
+<section class="vconnect-contact-wrapper" id="contact">
+  <div class="vconnect-contact-intro">
+    <p class="vconnect-contact-small">Let’s Talk</p>
+    <h2 class="vconnect-contact-heading">We’d Love to Hear From You</h2>
+    <p class="vconnect-contact-desc">
+      Reach out for collaboration, queries, or a simple hello.
+    </p>
+  </div>
+
+  <div class="vconnect-contact-grid">
+    <div class="vconnect-contact-info">
+      <div class="vconnect-info-item">
+        <span class="vconnect-info-label">Address:</span>
+        <span class="vconnect-info-text">862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, Bengaluru, 560095</span>
+      </div>
+      <div class="vconnect-info-item">
+        <span class="vconnect-info-label">Email:</span>
+        <a href="mailto:business@allfinno..com" class="vconnect-info-text">business@allfinno.com</a>
+      </div>
+      <div class="vconnect-info-item">
+        <span class="vconnect-info-label">Website:</span>
+        <a href="https://vconnectit.in" target="_blank" class="vconnect-info-text">www.allfinno.com</a>
+      </div>
+    </div>
+
+    <form id="contactForm" action="process_contact.php" method="POST" class="vconnect-contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <input type="text" id="mobile" name="mobile" placeholder="Mobile Number" pattern="\d{10}" required />
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<!-- Contact Section Ends -->
+
+  <!-- Success Dialog Box -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Thank you for contacting us! Your details have been successfully submitted.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize EmailJS
+    emailjs.init("j6NzoOIwM7yCFEhAZ");
+
+    // JavaScript for form submission
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Get form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const mobile = document.getElementById("mobile").value;
+      const message = document.getElementById("message").value;
+
+      // EmailJS email parameters
+      const emailParams = {
+        from_name: name,
+        email: email,
+        mobile: mobile,
+        message: message,
+      };
+
+      // Send email using EmailJS
+      emailjs  
+        .send("service_aoc0t1t", "template_6wgp25m", emailParams)
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            // Show success dialog box
+            var myModal = new bootstrap.Modal(document.getElementById('successModal'));
+            myModal.show();
+
+            // Reset the form after submission
+            document.getElementById("contactForm").reset(); 
+          },
+          (error) => {
+            console.error("FAILED...", error);
+            alert("There was an error submitting your details. Please try again.");
+          }
+        );
+    });
+  </script>
+
+    <!-- Back to Top Button -->
+   <button id="backToTopBtn">&#8679;</button>
+<script src="script.js"></script>
+
+<!-- Footer Section Starts -->
+<!-- Footer Section Starts -->
+<footer class="text-center text-muted py-4">
+  <div class="footer">
+    <div class="footer-container">
+
+      <!-- Company Logo & Name -->
+      <div class="footer-brand">
+        <img
+          src="images/logo.png"
+          alt="Company Logo"
+          class="footer-logo"
+        />
+        <h3 class="pt-2" data-aos="fade-up">
+          VConnect  
+        </h3>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="link-group d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up">
+        <a href="index.html" class="mx-2"><i class="bi bi-house-door"></i> Home</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="about.html" class="mx-2"><i class="bi bi-info-circle"></i> About</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="careers.html" class="mx-2"><i class="bi bi-briefcase"></i> Careers</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="services.html" class="mx-2"><i class="bi bi-people"></i> Services</a>
+        <span class="mx-2 text-white">|</span>
+        <a href="contact.html" class="mx-2"><i class="bi bi-envelope"></i> Contact Us</a>
+      </div>
+
+      <!-- Footer Sections -->
+     <footer class="footer-advanced">
+     <!-- Services -->
+    <div class="footer-section align-left">
+    <h4>Services</h4>
+    <ul>
+      <p><a href="#" >Telecalling</a></p>
+      <p><a href="#" >Customer Support</a></p>
+      <p><a href="#" >Email Support</a></p>
+    </ul>
+  </div>
+    <!-- Our Company -->
+    <div class="footer-section align-center-left">
+      <h4>Our Company</h4>
+    <ul>
+      <p><a href="#" >Blog</a></p>
+      <p><a href="#" >FAQ</a></p>
+      <p><a href="#" >About US</a></p>
+    </ul>
+  </div>
+    <!-- Legal -->
+    <div class="footer-section align-center-right">
+      <h4>Legal</h4>
+    <ul>
+      <p><a href="#" >Privacy Policy</a></p>
+      <p><a href="#" >Terms and Conditions</a></p>
+    </ul>
+  </div>
+    <!-- Contact US -->
+    <div class="footer-section align-right">
+      <h4>Contact US</h4>
+      <p><a href="https://allfinno.com" target="_blank">www.allfinno.com</a></p>
+      <p><a href="mailto:business@allfinno.com">business@allfinno.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block
+        <br>
+        Opp: Koramangala Indoor Stadium Back Gate,
+        <br>
+        Bengaluru, Karnataka 560095</p>
+  </div>
+      </footer>
+
+        <!-- Social Links -->
+        <div class="social-links mt-5" data-aos="fade-up">
+          <button class="rounded-pill instagram" onclick="visitInstagram()" title="Visit Instagram" aria-label="Visit Instagram">
+            <i class="bi bi-instagram"></i>
+          </button>
+
+          <button class="rounded-pill email" onclick="sendEmail()" title="Send Email" aria-label="Send Email">
+            <i class="bi bi-envelope"></i>
+          </button>
+
+          <button class="rounded-pill twitter" onclick="visitTwitter()" title="Visit Twitter" aria-label="Visit Twitter">
+            <i class="bi bi-twitter"></i>
+          </button>
+
+          <button class="rounded-pill linkedin" onclick="visitLinkedIn()" title="Visit LinkedIn" aria-label="Visit LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </button>
+        </div>
+
+        <hr class="footer-divider" />
+        <p class="copyright">
+          &copy; 2025 Allfinno Capital Solutions | All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Buttons Script -->
+  <script>
+    function visitInstagram() {
+      window.open("https://www.instagram.com/", "_blank");
+    }
+    function sendEmail() {
+      window.location.href = "vconnectcollection@gmail.com";
+    }
+    function visitTwitter() {
+      window.open("https://twitter.com/", "_blank");
+    }
+    function visitLinkedIn() {
+      window.open("https://www.linkedin.com/", "_blank");
+    }
+  </script>
+</footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+      document.getElementById("mobileMenuToggle").addEventListener("click", function () {
+        let navMenu = document.getElementById("navbarNav");
+        if (navMenu.classList.contains("show")) {
+          navMenu.classList.remove("show");
+        } else {
+          navMenu.classList.add("show");
+        }
+      });
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS File Linking -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
