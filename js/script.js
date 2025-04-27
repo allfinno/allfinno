@@ -50,16 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
    // Get the button
 const backToTopBtn = document.getElementById("backToTopBtn");
 
-// Show button when scrolled down 100px
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+// Show button after scrolling down 100px
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 100) {
     backToTopBtn.style.display = "block";
   } else {
     backToTopBtn.style.display = "none";
   }
-};
+});
 
-// When button is clicked, scroll to top smoothly
+// Scroll to top smoothly when clicked
 backToTopBtn.addEventListener("click", function() {
   window.scrollTo({
     top: 0,
