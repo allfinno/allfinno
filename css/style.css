@@ -1160,14 +1160,14 @@ footer p {
     }
 }
 
-/* Styling back to top button */
+/* Back to Top Button Style */
 #backToTopBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
   display: none; /* Hidden by default */
-  background: linear-gradient(135deg, #59b9ef 0%, #25d6ef 100%);
-  color: #0785ad;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
   border: none;
   outline: none;
   width: 50px;
@@ -1180,7 +1180,7 @@ footer p {
   z-index: 1000;
 }
 
-/* Hover effect */
+/* Hover Effect */
 #backToTopBtn:hover {
   background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
   transform: scale(1.1);
