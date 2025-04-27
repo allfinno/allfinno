@@ -192,7 +192,7 @@ const typedText = document.querySelector(".typed-text");
 const phrases = [
   'Debt Recovery Solutions',
   'Smart Debt Recovery',
-  'Customer Support that Converts',
+  'Customer Support',
   'AI-powered Communication',
   'Next-Gen BPO Solutions'
 ];
@@ -201,6 +201,10 @@ let currentPhraseIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
 let currentPhrase = "";
+
+let typingSpeed = 150;  // Typing speed (in ms per character)
+let deletingSpeed = 100; // Deleting speed (in ms per character)
+let delayBeforeNext = 1500; // Delay between deleting a phrase and typing the next one
 
 function typeText() {
   currentPhrase = phrases[currentPhraseIndex];
@@ -211,9 +215,11 @@ function typeText() {
     currentCharIndex++;
 
     if (currentCharIndex === currentPhrase.length) {
-      // Wait before starting to delete
+      // Wait before starting to delete the phrase
       isDeleting = true;
-      setTimeout(typeText, 1000);  // Pause after full text is typed
+      setTimeout(typeText, delayBeforeNext);  // Delay before starting to delete
+    } else {
+      setTimeout(typeText, typingSpeed);  // Delay between typing each character
     }
   } else {
     // Deleting effect: remove characters one by one
@@ -221,15 +227,19 @@ function typeText() {
     currentCharIndex--;
 
     if (currentCharIndex === 0) {
-      // Start typing next phrase
-      isDeleting = false;
+      // Move to the next phrase after deletion
       currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+      isDeleting = false;
+
+      // Wait before typing the next phrase (this is where we control the delay)
+      setTimeout(typeText, delayBeforeNext);  // Adds delay before typing the next phrase
+    } else {
+      setTimeout(typeText, deletingSpeed);  // Delay between deleting each character
     }
   }
-
-  // Speed of typing and deleting
-  setTimeout(typeText, isDeleting ? 50 : 150);
 }
 
-// Wait for DOM to load before starting
-document.addEventListener("DOMContentLoaded", typeText);
+// Start the typing effect after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(typeText, 1000);  // Adds a 1-second delay before the first phrase starts typing
+}); 
