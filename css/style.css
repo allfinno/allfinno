@@ -8,7 +8,27 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* Apply styles only on screens smaller than 768px */
+@media (max-width: 768px) {
+  .grid-box {
+    flex: 0 0 100%; /* stack boxes vertically */
+  }
 
+  .header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+}
 /* Header Styles */
 .boxed-header {
     background-color: #f0f8ff; /* Light blue background */
@@ -28,6 +48,7 @@ body {
 
 /* Inside header (container) */
 .container {
+    width: 90%;
     display: flex;
     align-items: center;  /* Align items vertically in the center */
     justify-content: space-between; /* Space out logo and nav */
@@ -154,6 +175,7 @@ body {
 
 /* Ribbons Section */
 .ribbons-container {
+    width: 90%;
     position: relative;
     z-index: 10;
     padding: 40px 20px; /* Added padding for more spacing */
@@ -299,6 +321,7 @@ body {
 
 /* Grid Container for 3 boxes per row */
 .grid-container {
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 20px;
@@ -402,6 +425,7 @@ body {
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .grid-container {
+        width: 90%;
         grid-template-columns: 1fr; /* One column for smaller screens */
     }
 }
@@ -427,6 +451,7 @@ body {
 }
 
 .marquee-container {
+    width: 90%;
   display: flex;
   flex-wrap: nowrap;
   animation: marquee 40s linear infinite; /* Marquee animation */
@@ -584,7 +609,7 @@ justify-content: flex-start; /* Start from the left */
 }
 
 .contact-container {
-  max-width: 700px;
+  width: 90%;
   margin: auto;
   background: #fff;
   padding: 40px;
@@ -650,7 +675,7 @@ justify-content: flex-start; /* Start from the left */
 }
 
 .about-container {
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -962,6 +987,7 @@ footer {
 }
 
 .faq-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -1007,7 +1033,7 @@ footer {
     background: #0f78bd;
 }
 .container1 {
-    width: 85%;
+    width: 90%;
     margin: 40px auto;
     padding: 40px;
     background-color: rgba(53, 176, 210, 0.28);
