@@ -1,232 +1,91 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // ================== Carousel Functionality ====================
-  const carousel = document.querySelector("#homeCarousel");
-  if (carousel) {
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".carousel-item");
+console.log("Website loaded successfully!");
+console.log("Script Loaded!");
 
-    if (slides.length > 0 && !document.querySelector(".carousel-item.active")) {
-      slides[0].classList.add("active");
-    }
+// script.js
 
-    function autoSlide() {
-      if (slides.length > 0) {
-        slides[slideIndex].classList.remove("active");
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].classList.add("active");
-      }
-    }
+const typedTextElement = document.querySelector('.typed-text');
 
-    setInterval(autoSlide, 5000);
-  }
-
-  // ================== jQuery Filter Functionality ====================
-  if (typeof $ !== "undefined") {
-    $(".filter-item").click(function () {
-      const value = $(this).attr("data-filter");
-      if (value === "all") {
-        $(".post").show(1000);
-      } else {
-        $(".post").not("." + value).hide(1000);
-        $(".post").filter("." + value).show(1000);
-      }
-    });
-  }
-
-  // ================== Sticky Navbar ====================
-  const navbar = document.getElementById("navbar-top");
-  if (navbar) {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) {
-        navbar.classList.add("fixed-top");
-        document.body.classList.add("fixed-navbar");
-      } else {
-        navbar.classList.remove("fixed-top");
-        document.body.classList.remove("fixed-navbar");
-      }
-    });
-  }
-
-   // Get the button
-const backToTopBtn = document.getElementById("backToTopBtn");
-
-// Show button after scrolling down 100px
-window.addEventListener("scroll", function() {
-  if (window.scrollY > 100) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
-
-// Scroll to top smoothly when clicked
-backToTopBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
-  // ================== About Section Scroll Animation ====================
-  const aboutSection = document.querySelector("#about");
-  if (aboutSection) {
-    aboutSection.style.opacity = "0";
-    aboutSection.style.transform = "translateY(30px)";
-    aboutSection.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
-
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            aboutSection.style.opacity = "1";
-            aboutSection.style.transform = "translateY(0)";
-            observer.unobserve(aboutSection);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(aboutSection);
-  }
-
-  // ================== Form Validation ====================
-  const contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      let isValid = true;
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const mobile = document.getElementById("mobile").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      // Name validation
-      if (name === "") {
-        isValid = false;
-        document.getElementById("nameError").classList.remove("d-none");
-      } else {
-        document.getElementById("nameError").classList.add("d-none");
-      }
-
-      // Email validation
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        isValid = false;
-        document.getElementById("emailError").classList.remove("d-none");
-      } else {
-        document.getElementById("emailError").classList.add("d-none");
-      }
-
-      // Mobile number validation
-      const mobilePattern = /^[0-9]{10}$/;
-      if (!mobilePattern.test(mobile)) {
-        isValid = false;
-        document.getElementById("mobileError").classList.remove("d-none");
-      } else {
-        document.getElementById("mobileError").classList.add("d-none");
-      }
-
-      // Message validation
-      if (message === "") {
-        isValid = false;
-        document.getElementById("messageError").classList.remove("d-none");
-      } else {
-        document.getElementById("messageError").classList.add("d-none");
-      }
-
-      if (isValid) {
-        alert("Form submitted successfully!");
-        contactForm.reset();
-      }
-    });
-  }
-
-  // ================== Close Mobile Menu when clicking outside ====================
-  const navbarToggler = document.querySelector(".navbar-toggler");
-  const navbarCollapse = document.querySelector("#navbarNav");
-
-  document.addEventListener("click", function (event) {
-    if (
-      navbarToggler &&
-      navbarCollapse &&
-      !navbarToggler.contains(event.target) &&
-      !navbarCollapse.contains(event.target)
-    ) {
-      navbarCollapse.classList.remove("show");
-    }
-  });
-
-  // ================== Read More Buttons ====================
-  const readMoreButtons = document.querySelectorAll(".read-more-btn");
-  if (readMoreButtons.length > 0) {
-    readMoreButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        const content = this.nextElementSibling;
-        if (content) {
-          if (content.style.display === "block") {
-            content.style.display = "none";
-            this.textContent = "Read More";
-          } else {
-            content.style.display = "block";
-            this.textContent = "Read Less";
-          }
-        }
-      });
-    });
-  }
-
-  // ================== Footer Logo Animation ====================
-  const logo = document.querySelector(".footer-logo");
-  if (logo) {
-    logo.style.opacity = 0;
-    logo.style.transition = "opacity 1s ease-in-out";
-    setTimeout(() => {
-      logo.style.opacity = 1;
-    }, 200);
-  }
-});
-
-// ================== Typing Effect ====================
-const typedText = document.querySelector(".typed-text");
-const phrases = [
-  'Debt Recovery Solutions',
+// Array of strings for multiple lines of text
+const linesToType = [
   'Smart Debt Recovery',
-  'Customer Support that Converts',
+  'Customer Support',
+  'Email Chat Support',
   'AI-powered Communication',
-  'Next-Gen BPO Solutions'
+  'Next-Gen BPO Solutions',
 ];
 
-let phraseIndex = 0;
-let charIndex = 0;
-let typingDelay = 100;
-let erasingDelay = 60;
-let nextPhraseDelay = 2000;
+let lineIndex = 0;  // Track which line we're typing
+let charIndex = 0;  // Track the current character for typing
+let typing = true;   // Control whether we are typing or deleting
 
-function type() {
-  if (!typedText) return;
-  if (charIndex < phrases[phraseIndex].length) {
-    typedText.textContent += phrases[phraseIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } else {
-    setTimeout(erase, nextPhraseDelay);
-  }
+// Function to type the text
+function typeText() {
+    if (lineIndex < linesToType.length) {
+        const currentLine = linesToType[lineIndex];
+
+        if (typing) {
+            // Typing effect: Type one character at a time
+            if (charIndex < currentLine.length) {
+                typedTextElement.innerHTML += currentLine.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 100);  // Adjust the speed here (in ms)
+            } else {
+                // Once the line is fully typed, switch to deleting after a short delay
+                setTimeout(function () {
+                    typing = false;  // Switch to deleting
+                    setTimeout(typeText, 500);  // Delay before starting to delete
+                }, 1000);  // Wait 1 second before starting to delete
+            }
+        } else {
+            // Deleting effect: Delete one character at a time
+            if (charIndex > 0) {
+                typedTextElement.innerHTML = currentLine.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeText, 50);  // Adjust the speed of deleting here (in ms)
+            } else {
+                // Once the line is fully deleted, move to the next line
+                typing = true;  // Switch back to typing mode
+                lineIndex++;     // Move to the next line
+                setTimeout(typeText, 500);  // Short delay before starting the next line
+            }
+        }
+    } else {
+        // When all lines are completed, reset to the first line and repeat
+        setTimeout(function () {
+            lineIndex = 0;  // Reset the line index
+            charIndex = 0;  // Reset the character index
+            typing = true;  // Start typing again
+            typedTextElement.innerHTML = '';  // Clear the text element
+            setTimeout(typeText, 200);  // Start the typing effect again after a short delay
+        }, 1000);  // Wait for 1 seconds before starting over
+    }
 }
 
-function erase() {
-  if (!typedText) return;
-  if (charIndex > 0) {
-    typedText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } else {
-    phraseIndex++;
-    if (phraseIndex >= phrases.length) phraseIndex = 0;
-    setTimeout(type, typingDelay);
-  }
-}
+// Start the typing effect when the page is loaded
+window.onload = typeText;
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (typedText && phrases.length) setTimeout(type, 800);
+// Select the ribbons container
+const ribbonsContainer = document.getElementById('ribbons-container');
+
+// Set up Intersection Observer to trigger visibility when scrolled into view
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add class to show ribbons
+            ribbonsContainer.classList.add('visible');
+            // Stop observing once it is visible
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 }); // 50% of the ribbons should be in view to trigger
+
+// Start observing the ribbons container
+observer.observe(ribbonsContainer);
+
+const faqs = document.querySelectorAll('.faq-item');
+
+faqs.forEach(faq => {
+  faq.querySelector('.faq-question').addEventListener('click', () => {
+    faq.classList.toggle('active');
+  });
 });
