@@ -89,3 +89,11 @@ faqs.forEach(faq => {
     faq.classList.toggle('active');
   });
 });
+
+fetch(scriptURL, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+});
