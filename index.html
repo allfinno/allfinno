@@ -9,6 +9,42 @@
     <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* Responsive Styles for Mobile Only */
+      @media (max-width: 768px) {
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .hero-content h1 {
+          font-size: 1.6rem;
+          text-align: center;
+        }
+
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .client-logos-marquee .marquee-container {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        }
+
+        .client-logo {
+          max-width: 100px;
+        }
+      }
+    </style>
 </head>
 <body>
 
