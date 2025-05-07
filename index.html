@@ -3,48 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Add Font Awesome CDN link -->
+    <!-- Add Font Awesome CDN link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <title>Allfinno</title> 
     <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="style.css">
     <style>
-      /* Responsive Styles for Mobile Only */
-      @media (max-width: 768px) {
-        .nav-links {
-          flex-direction: column;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .grid-container {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-
-        .hero-content h1 {
-          font-size: 1.6rem;
-          text-align: center;
-        }
-
-        .footer-links {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-        }
-
-        .client-logos-marquee .marquee-container {
-          flex-wrap: nowrap;
-          overflow-x: auto;
-        }
-
-        .client-logo {
-          max-width: 100px;
-        }
+        @media (max-width: 768px) {
+      .boxed-header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
-    </style>
+
+      .logo-img {
+        max-width: 180px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-left: 0;
+      }
+
+      .nav-links li {
+        list-style: none;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      .hero-content h1 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .center-ribbons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .ribbon {
+        width: 100%;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .grid-box {
+        text-align: center;
+      }
+
+      .client-logos-marquee .marquee-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 10px;
+      }
+
+      .client-logo {
+        max-width: 100px;
+        height: auto;
+      }
+
+      .footer-logo img {
+        width: 120px;
+        margin: 10px auto;
+        display: block;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .footer-column ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin: 8px 0;
+      }
+
+      .footer-social ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -70,7 +136,7 @@
     <div class="hero-content">
         <h1>Welcome to Allfinno</h1>
         <p>Professional debt recovery services to your needs. <br /> <strong> We Provide</strong></p>
-        <p class="typed-text"></p> <!-- This will be the typed text -->
+        <p class="typed-text"></p>
       </div>
 </section>
     
