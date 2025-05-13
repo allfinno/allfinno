@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Add Font Awesome CDN link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <title>Contact Us</title> 
-       <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="icon" type="image/png" href="/images/logo.png">
-    <!-- Bootstrap CSS CDN Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Allfinno</title>
+  <link rel="icon" type="image/x-icon" href="image/logo.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <header class="boxed-header">
-    <div class="container">
-        <img src="images/logo1.png" alt="allfinno." class="logo-img">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<main>
-
-  <section class="contact-section">
-  <div class="contact-container">
-    <h2>Contact Us</h2>
-    <p>We’re here to help. Please fill out the form below to get in touch.</p>
+  <!-- Fixed Header -->
+<!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-title">
+        <img src="image/logo1.png" alt="Logo" class="logo" />
+      </div>
+    </div> 
+   <nav class="nav">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+  <a href="service.html"><i class="fas fa-tools"></i> Services</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+<button id="backToTop">
+  ↑
+  <svg class="progress-ring" width="50" height="50">
+    <circle r="23" cx="25" cy="25"></circle>
+  </svg>
+</button>
     
+<section class="contact-section">
+    <h2 class="contact-heading">Contact Us</h2>
+    <h3 class="contact-down"> We’re here to help. Please fill out the form below to get in touch.</h3>
     <form class="contact-form" action="https://formsubmit.co/allfinnocapital@gmail.com" method="POST">
       <div class="form-group">
         <label for="name">Full Name</label>
@@ -58,96 +59,53 @@
 
       <button type="submit" class="submit-btn">Send Message</button>
     </form>
-  </div>
-      <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwt5U7RekzFC2yyL2OqdfsI4mIzdPi5UYRz1IebTmq0y-mV7MipdybdqX8Yp2GPkec/exec; // paste your Apps Script Web URL
-  const form = document.getElementById('contact-form');
-  const responseMsg = document.getElementById('form-response');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
-
-    fetch(scriptURL, {
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
-    .then(response => {
-      responseMsg.textContent = "Thank you! Your message has been sent.";
-      form.reset();
-    })
-    .catch(error => {
-      responseMsg.textContent = "Error submitting the form. Please try again.";
-      console.error('Error!', error.message);
-    });
-  });
-</script>
-</section>
+    </section>
+    
 <script src="script.js"></script>
-  <!-- Footer Section (same as index page) -->
-   <footer id="footer">
-    <!-- Company Logo -->
-    <div class="footer-logo">
-        <img src="images/logo.png" alt="Company Logo" />
+  
+ <footer class="footer">
+  <div class="footer-links">
+    <div class="footer-column">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="tele.html">Tele Calling</a></li>
+        <li><a href="support.html">Customer Support</a></li>
+      </ul>
     </div>
-
-    <!-- Footer Links Section -->
-    <div class="footer-links">
-        <div class="footer-column">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="telecalling.html">Tele Calling</a></li>
-                <li><a href="support.html">Customer Support</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Our Company</h3>
-            <ul>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Legal</h3>
-            <ul>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Conditons</a></li>
-            </ul>
-        </div>
-
-      <div class="footer-column">
-    <h3>Contact Us</h3>
-    <ul>
-        <li><i class="fas fa-globe"></i>www.allfinno.com</li>
-        <li><i class="fas fa-envelope"></i> business@allfinno.com</li>
+    <div class="footer-column">
+      <h3>Our Company</h3>
+      <ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Conditons</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+     <ul>
+        <li><i class="fas fa-globe"></i> <a href="https://allfinno.com"> www.allfinno.com</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:business@allfinno.com"> business@allfinno.com</a></li>
         <li><i class="fas fa-map-marker-alt"></i> 862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</li>
     </ul>
-</div>   
+    </div>
+  </div>
+<hr class="footer-divider" />
+<div class="footer-social">
+  <ul>
+    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+  </ul>
 </div>
-        
-        <!-- Line above Social Media buttons -->
-        <div class="footer-social-line"></div>
 
-        <!-- Social Media Section -->
-        <div class="footer-social">
-            <ul>
-                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        
-        <p>© 2025 Allfinno Capital Solutions. All rights reserved.</p>
-    </footer>
-    </main>
-    </body>
+  <p class="footer-rights">© 2025 Allfinno Capital Solutions. All rights reserved.</p>
+</footer>
+</body>
 </html>
