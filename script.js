@@ -1,99 +1,93 @@
-console.log("Website loaded successfully!");
-console.log("Script Loaded!");
 
-// script.js
+// Event listener to trigger on load and scroll
+window.addEventListener('load', handleScroll);
+window.addEventListener('scroll', handleScroll);
 
-const typedTextElement = document.querySelector('.typed-text');
-
-// Array of strings for multiple lines of text
-const linesToType = [
-  'Smart Debt Recovery',
-  'Customer Support',
-  'Email Chat Support',
-  'AI-powered Communication',
-  'Next-Gen BPO Solutions',
-];
-
-let lineIndex = 0;  // Track which line we're typing
-let charIndex = 0;  // Track the current character for typing
-let typing = true;   // Control whether we are typing or deleting
-
-// Function to type the text
-function typeText() {
-    if (lineIndex < linesToType.length) {
-        const currentLine = linesToType[lineIndex];
-
-        if (typing) {
-            // Typing effect: Type one character at a time
-            if (charIndex < currentLine.length) {
-                typedTextElement.innerHTML += currentLine.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeText, 100);  // Adjust the speed here (in ms)
-            } else {
-                // Once the line is fully typed, switch to deleting after a short delay
-                setTimeout(function () {
-                    typing = false;  // Switch to deleting
-                    setTimeout(typeText, 500);  // Delay before starting to delete
-                }, 1000);  // Wait 1 second before starting to delete
-            }
-        } else {
-            // Deleting effect: Delete one character at a time
-            if (charIndex > 0) {
-                typedTextElement.innerHTML = currentLine.substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(typeText, 50);  // Adjust the speed of deleting here (in ms)
-            } else {
-                // Once the line is fully deleted, move to the next line
-                typing = true;  // Switch back to typing mode
-                lineIndex++;     // Move to the next line
-                setTimeout(typeText, 500);  // Short delay before starting the next line
-            }
-        }
-    } else {
-        // When all lines are completed, reset to the first line and repeat
-        setTimeout(function () {
-            lineIndex = 0;  // Reset the line index
-            charIndex = 0;  // Reset the character index
-            typing = true;  // Start typing again
-            typedTextElement.innerHTML = '';  // Clear the text element
-            setTimeout(typeText, 200);  // Start the typing effect again after a short delay
-        }, 1000);  // Wait for 1 seconds before starting over
-    }
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom > 0;
 }
 
-// Start the typing effect when the page is loaded
-window.onload = typeText;
+function handleScroll() {
+  const gboxes = document.querySelectorAll('.gbox');
+  gboxes.forEach(box => {
+    if (isInViewport(box)) {
+      box.classList.add('in-view');
+      box.classList.remove('out-of-view');
+    } else {
+      box.classList.remove('in-view');
+      box.classList.add('out-of-view');
+    }
+  });
+}
 
-// Select the ribbons container
-const ribbonsContainer = document.getElementById('ribbons-container');
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom > 0;
+}
 
-// Set up Intersection Observer to trigger visibility when scrolled into view
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Add class to show ribbons
-            ribbonsContainer.classList.add('visible');
-            // Stop observing once it is visible
-            observer.unobserve(entry.target);
-        }
+function handleScroll() {
+  const boxes = document.querySelectorAll('.g-box');
+  boxes.forEach(box => {
+    if (isInViewport(box)) {
+      box.classList.add('in-view');
+      box.classList.remove('out-of-view');
+    } else {
+      box.classList.remove('in-view');
+      box.classList.add('out-of-view');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTop = document.getElementById("backToTop");
+  const circle = document.querySelector(".progress-ring circle");
+
+ const radius = 26;
+const circumference = 2 * Math.PI * radius;
+  
+  circle.style.strokeDasharray = `${circumference}`;
+  circle.style.strokeDashoffset = `${circumference}`;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollTop / height;
+    const offset = circumference * (1 - progress);
+    circle.style.strokeDashoffset = offset;
+
+    backToTop.style.display = scrollTop > 100 ? "flex" : "none";
+  }
+
+  window.addEventListener("scroll", updateProgress);
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
-}, { threshold: 0.5 }); // 50% of the ribbons should be in view to trigger
-
-// Start observing the ribbons container
-observer.observe(ribbonsContainer);
-
-const faqs = document.querySelectorAll('.faq-item');
-
-faqs.forEach(faq => {
-  faq.querySelector('.faq-question').addEventListener('click', () => {
-    faq.classList.toggle('active');
   });
 });
 
-fetch(scriptURL, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
+// JavaScript to detect when boxes come into view
+document.addEventListener('DOMContentLoaded', function () {
+  const boxes = document.querySelectorAll('.about-box');
+
+  const checkBoxes = () => {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    boxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        box.classList.add('in-view');
+      } else {
+        box.classList.remove('in-view');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', checkBoxes);
+  checkBoxes(); // Initial check in case boxes are already in view
 });
