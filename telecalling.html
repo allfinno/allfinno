@@ -1,129 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Add Font Awesome CDN link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <title>Tele Calling</title> 
-       <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Allfinno</title>
+  <link rel="icon" type="image/x-icon" href="image/logo.png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="boxed-header">
-    <div class="container">
-        <img src="images/logo1.png" alt="allfinno." class="logo-img">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- Fixed Header -->
+<!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-title">
+        <img src="image/logo1.png" alt="Logo" class="logo" />
+      </div>
+    </div> 
+   <nav class="nav">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+  <a href="service.html"><i class="fas fa-tools"></i> Services</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+<button id="backToTop">
+  ↑
+  <svg class="progress-ring" width="50" height="50">
+    <circle r="23" cx="25" cy="25"></circle>
+  </svg>
+</button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 600,
+    once: false,      // Keep animation on scroll up
+    mirror: false,
+  });
+</script>
+    
+     <section class="tele-section">
+    <div class="tele-box" data-aos="fade-up" data-aos-delay="200">
+      <h3>What is Telecalling?</h3>
+      <h2>Telecalling is the art of connecting with clients over the phone to address inquiries, promote services, and enhance customer engagement. It’s a critical component of modern businesses aiming to foster strong client relationships and drive sales growth. At Allfinno, we offer top-notch telecalling services tailored to meet the unique requirements of your business.
+</h2>
     </div>
-</header>
-    <!-- Telecalling Section -->
-  <section class="telecalling-section">
-    <h2 class="section-heading">Telecalling Services</h2>
-    <p class="section-description">
-      Our Telecalling Services are designed to support debt collection and customer relationship management effectively.
-      We ensure every call is handled professionally and adheres to compliance standards. 
-      Here's how we help our clients improve collections and customer satisfaction:
-    </p>
-
-    <div class="telecalling-grid">
-  <div class="tele-card">
-    <i class="fas fa-phone-volume"></i>
-    <h3>Debt Follow-ups</h3>
-    <p>Timely outbound calls to remind and assist defaulters with repayment options.</p>
-  </div>
-  <div class="tele-card">
-    <i class="fas fa-handshake"></i>
-    <h3>Customer Relationship</h3>
-    <p>Building trust through consistent, professional communication.</p>
-  </div>
-  <div class="tele-card">
-    <i class="fas fa-language"></i>
-    <h3>Multilingual Support</h3>
-    <p>Conversations in regional languages to improve understanding and response.</p>
-  </div>
-  <div class="tele-card">
-    <i class="fas fa-chart-pie"></i>
-    <h3>Reporting & Tracking</h3>
-    <p>Real-time updates and performance analytics for each call.</p>
-  </div>
-  <div class="tele-card">
-    <i class="fas fa-shield-alt"></i>
-    <h3>Compliance</h3>
-    <p>All calls follow legal standards, protecting your brand and customers.</p>
-  </div>
-  <div class="tele-card">
-    <i class="fas fa-bullhorn"></i>
-    <h3>Lead Generation</h3>
-    <p>Promoting services and capturing quality leads through professional outreach.</p>
-  </div>
-</div>
+    <div class="tele-box" data-aos="fade-up" data-aos-delay="200">
+    <h3>Our Telecalling Features</h3>
+        <ul>
+            <li>📞 <strong>Outbound Calls:</strong> Proactively reach potential clients and promote your services.</li>
+            <li>📲 <strong>Inbound Support:</strong> Handle customer inquiries and resolve issues effectively.</li>
+            <li>📋 <strong>Lead Generation:</strong> Identify and engage with high-quality leads for your business.</li>
+            <li>💼 <strong>Appointment Scheduling:</strong> Manage appointments efficiently for your sales team.</li>
+            <li>📈 <strong>Performance Tracking:</strong> Regular analytics and reports to measure campaign success.</li>
+        </ul>
+         </div>
+    <div class="tele-box" data-aos="fade-up" data-aos-delay="200">
+     <h3>Benefits of Choosing Us</h3>
+        <p>By partnering with <strong>VConnect,</strong> you gain access to:</p>
+        <ul class="list-disc">
+            <li>Experienced and professional telecalling agents.</li>
+            <li>Customized scripts to align with your business goals.</li>
+            <li>Cost-effective solutions to reduce operational expenses.</li>
+            <li>Improved client retention and customer satisfaction.</li>
+            <li>Enhanced sales conversion rates through strategic calling campaigns.</li>
+        </ul>
+    </div>
   </section>
+
+    
     <script src="script.js"></script>
-      <footer id="footer">
-    <!-- Company Logo -->
-    <div class="footer-logo">
-        <img src="images/logo.png" alt="Company Logo" />
+  
+ <footer class="footer">
+  <div class="footer-links">
+    <div class="footer-column">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="tele.html">Tele Calling</a></li>
+        <li><a href="support.html">Customer Support</a></li>
+      </ul>
     </div>
-
-    <!-- Footer Links Section -->
-    <div class="footer-links">
-        <div class="footer-column">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="telecalling.html">Tele Calling</a></li>
-                <li><a href="support.html">Customer Support</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Our Company</h3>
-            <ul>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Legal</h3>
-            <ul>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Conditons</a></li>
-            </ul>
-        </div>
-
-      <div class="footer-column">
-    <h3>Contact Us</h3>
-    <ul>
-        <li><i class="fas fa-globe"></i>www.allfinno.com</li>
-        <li><i class="fas fa-envelope"></i> business@allfinno.com</li>
+    <div class="footer-column">
+      <h3>Our Company</h3>
+      <ul>
+        <li><a href="blog.hmtl">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Conditons</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+     <ul>
+        <li><i class="fas fa-globe"></i> <a href="https://allfinno.com"> www.allfinno.com</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:business@allfinno.com"> business@allfinno.com</a></li>
         <li><i class="fas fa-map-marker-alt"></i> 862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</li>
     </ul>
-</div>   
+    </div>
+  </div>
+<hr class="footer-divider" />
+<div class="footer-social">
+  <ul>
+    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+  </ul>
 </div>
-        
-        <!-- Line above Social Media buttons -->
-        <div class="footer-social-line"></div>
 
-        <!-- Social Media Section -->
-        <div class="footer-social">
-            <ul>
-                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        
-        <p>© 2025 Allfinno Capital Solutions. All rights reserved.</p>
-    </footer>
-    </body>
+  <p class="footer-rights">© 2025 Allfinno Capital Solutions. All rights reserved.</p>
+</footer>
+</body>
 </html>
