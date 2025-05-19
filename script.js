@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+  // Wait 3 seconds, then fade in content and remove logo
+  setTimeout(() => {
+    const main = document.getElementById("main-content");
+    const intro = document.getElementById("intro-logo");
+
+    main.style.opacity = "1"; // fade in content
+    intro.style.display = "none"; // remove intro overlay
+  }, 2100);
+});
 
 // Event listener to trigger on load and scroll
 window.addEventListener('load', handleScroll);
