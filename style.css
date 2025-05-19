@@ -11,6 +11,45 @@ body {
   padding-top: 80px; /* Space for the fixed header */
 }
 
+#main-content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Full-screen intro overlay */
+#intro-logo {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Logo zoom and fade */
+#intro-logo img {
+  width: 100px;
+  height: auto;
+  animation: zoomFade 2.5s ease-in-out forwards;
+}
+
+/* Keyframes for logo */
+@keyframes zoomFade {
+  0% {
+    opacity: 1;
+    transform: scale(0.5) rotate(0deg);;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(3.8) rotate(0deg);;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5.8) rotate(-360deg);;
+  }
+}
+
 /* Header styles */
 @media (max-width: 768px) { 
 .header {
