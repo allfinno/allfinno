@@ -2,110 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Allfinno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Contact Us</title>
   <link rel="icon" type="image/x-icon" href="image/logo.png">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Fixed Header -->
-<!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo-title">
-        <img src="image/logo1.png" alt="Logo" class="logo" />
-      </div>
-    </div> 
-   <nav class="nav">
-  <a href="index.html"><i class="fas fa-home"></i> Home</a>
-  <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-  <a href="service.html"><i class="fas fa-tools"></i> Services</a>
-  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-    </nav>
+   <header>
+    <div class="logo">
+        <a href="index.html"><img src="image/logo1.png" alt="Agency Logo" class="logo-img"></a>
+    </div>
+    <section id="nav" class="nav-boxes">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-users"></i> About Us</a>
+      <a href="service.html"><i class="fas fa-briefcase"></i> Services</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+       </section>
   </header>
-<button id="backToTop">
-  ↑
-  <svg class="progress-ring" width="50" height="50">
-    <circle r="23" cx="25" cy="25"></circle>
-  </svg>
-</button>
+    <section class="contact-container">
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="https://formsubmit.co/allfinnocapital@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://allfinno.com/thankyou.html" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="number" placeholder="Your Number" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Reach Us At</h2>
+      <p><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block <br>Opp: Koramangala Indoor Stadium Back Gate,<br> Bengaluru, Karnataka 560095.</p><br>
+      <p><i class="fas fa-envelope"></i> business@allfinno.com</p><br>
+      <p><i class="fas fa-phone-alt"></i> +91 xxxxx xxxxx</p><br>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </section>
     
-<section class="contact-section">
-    <h2 class="contact-heading">Contact Us</h2>
-    <h3 class="contact-down"> We’re here to help. Please fill out the form below to get in touch.</h3>
-    <form class="contact-form" action="https://formsubmit.co/allfinnocapital@gmail.com" method="POST">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-      </div>
-
-      <div class="form-group">
-        <label for="subject">Contact Number</label>
-        <input type="text" id="subject" name="subject" placeholder="Your mobile number" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-    </section>
-    
-<script src="script.js"></script>
-  
- <footer class="footer">
-  <div class="footer-links">
+     <footer class="footer">
+  <!-- Middle: Footer Links -->
+  <div class="footer-container">
     <div class="footer-column">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="tele.html">Tele Calling</a></li>
-        <li><a href="support.html">Customer Support</a></li>
-      </ul>
+      <h4>Services</h4>
+      <a href="tele.html">Tele Calling</a>
+      <a href="support.html">Customer Support</a>
     </div>
     <div class="footer-column">
-      <h3>Our Company</h3>
-      <ul>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
+      <h4>Our Company</h4>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-column">
-      <h3>Legal</h3>
-      <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Conditons</a></li>
-      </ul>
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
     </div>
     <div class="footer-column">
-      <h3>Contact Us</h3>
-     <ul>
-        <li><i class="fas fa-globe"></i> <a href="https://allfinno.com"> www.allfinno.com</a></li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:business@allfinno.com"> business@allfinno.com</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> 862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</li>
-    </ul>
+      <h4>Contact Us</h4>
+    <a href="mailto:business@allfinno.com"> <i class="fas fa-envelope"></i>business@allfinno.com</a>
+   <a><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</a>
     </div>
   </div>
-<hr class="footer-divider" />
-<div class="footer-social">
-  <ul>
-    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-  </ul>
-</div>
-
-  <p class="footer-rights">© 2025 Allfinno Capital Solutions. All rights reserved.</p>
+     <hr>
+  <!-- Top: Social Media Icons -->
+  <div class="footer-socials">
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <!-- Bottom: Copyright -->
+  <div class="footer-bottom">
+    © 2025 Allfinno Capital Solutions. All rights reserved.
+  </div>
+     <script src="js/script.js"></script>
+<button id="backToTop" title="Back to Top">
+  <svg class="circle" width="50" height="50">
+    <circle cx="25" cy="25" r="22" stroke-width="4" />
+  </svg>
+  ⬆
+</button>
 </footer>
-</body>
+    </body>
 </html>
