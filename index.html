@@ -2,182 +2,188 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <title>Allfinno</title>
   <link rel="icon" type="image/x-icon" href="image/logo.png">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-   <div id="intro-logo">
-  <img src="image/logo.png" alt="Logo" />
-</div>
-
-<!-- Your main website content -->
-<div id="main-content" class="hidden">
-  <!-- Your actual website starts here -->
-</div>
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo-title">
-        <img src="image/logo1.png" alt="Logo" class="logo" />
-      </div>
-    </div> 
-   <nav class="nav">
-  <a href="index.html"><i class="fas fa-home"></i> Home</a>
-  <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-  <a href="service.html"><i class="fas fa-tools"></i> Services</a>
-  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-    </nav>
+   <header>
+    <div class="logo">
+        <a href="index.html"><img src="image/logo1.png" alt="Agency Logo" class="logo-img"></a>
+    </div>
+    <section id="nav" class="nav-boxes">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-users"></i> About Us</a>
+      <a href="service.html"><i class="fas fa-briefcase"></i> Services</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+       </section>
   </header>
-<button id="backToTop">
-  ↑
-  <svg class="progress-ring" width="50" height="50">
-    <circle r="23" cx="25" cy="25"></circle>
-  </svg>
-</button>
-  <!-- Hero Section with Video -->
-  <section class="hero">
-  <div class="hero-mask"></div>
-  <video class="hero-video" autoplay muted loop>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-  <div class="hero-content">
-    <h2>Welcome to Allfinno</h2>
-        <p>Professional debt recovery services to your needs. <br /> <strong> We Provide</strong></p>
-    <p><span id="typed-text"></span></p>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="video-mask">
+        <p>Wellcome to <strong> Allfinno Capital Solutions</strong></p>
+        <p><strong>We Provide</strong></p>
+           <h1><span id="typed-text"></span></h1>
+    </div>
+  </section>
+
+<section id="story" class="info-section">
+  <div class="info-box reveal-box from-left">
+    <h2><i class="fas fa-flag"></i> Our Journey</h2>
+    <p>
+      Since our inception in 2014, we've been committed to helping businesses recover their outstanding debts while maintaining their client relationships. Our agency was founded on the principle that debt recovery can be both effective and ethical. 
+    </p>
+    <p>
+      Over the years, we've expanded our reach across multiple industries — including finance, retail, healthcare, and more — by adapting modern strategies and technologies. Our skilled professionals handle each case with discretion and dedication, ensuring positive outcomes and long-term client satisfaction.
+    </p>
   </div>
-</section>  
-  
-  <section class="ribbon">
-    <h2 class="section-title">Our Core Services</h2>
-  <div class="ribbon-container">
-    <div class="box">
-      <h3>Corporate Debt Solutions</h3>
-      <p>Customized strategies to resolve corporate debt efficiently and improve cash flow cycles.</p>
-      <ul><li>Tailored B2B Recovery Models</li>
-                <li>Documentation & Legal Coordination</li>
-                <li>Advanced Business Investigations</li>
+
+  <div class="info-box reveal-box from-right">
+    <h2><i class="fas fa-handshake"></i> What We Offer</h2>
+    <p>
+      We offer a comprehensive suite of debt recovery services tailored to meet the needs of small businesses, corporations, and legal entities. Our services are built to increase your recovery rate while reducing your internal burden.
+    </p>
+    <p>
+      Key services include:
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Soft & Hard Collection Approaches</li>
+        <li><i class="fas fa-check-circle"></i> Legal Recovery Support</li>
+        <li><i class="fas fa-check-circle"></i> Skip Tracing & Debtor Investigation</li>
+        <li><i class="fas fa-check-circle"></i> Credit Risk Assessment</li>
+        <li><i class="fas fa-check-circle"></i> Dispute Resolution Mediation</li>
       </ul>
     </div>
-    <div class="box">
-      <h3>Consumer Collection Services</h3>
-      <p>Customer-friendly approaches to recover individual debts while preserving brand value.</p>
-       <ul>
-                <li>Polite & Professional Engagement</li>
-                <li>Flexible Repayment Structuring</li>
-                <li>Strict Regulatory Compliance</li>
-            </ul>
+    <p>
+      Our technology-enabled process ensures timely reporting, performance tracking, and transparency at every stage of the collection journey.
+    </p>
+    </section>
 
+<section class="ribbon-section">
+    <h4>Why Choose Us</h4>
+  <div class="ribbon-container">
+    <div class="ribbon-box reveal-box from-left">
+      <i class="lnr lnr-eye icon-img"></i>
+      <h3>Our Vision</h3>
+      <p>To be the most trusted name in debt recovery through ethical practices, transparency, and consistent results.</p>
     </div>
-    <div class="box">
-      <h3>Credit Health Improvement</h3>
-      <p>Empowering clients to rebuild and manage a strong credit profile for a better future.</p>
-      <ul>
-                <li>Personalized Credit Analysis</li>
-                <li>Dispute & Rectification Handling</li>
-                <li>Education on Financial Behavior</li>
-            </ul>
-
+    <div class="ribbon-box reveal-box from-left">
+      <i class="lnr lnr-bullhorn icon-img"></i>
+      <h3>Our Mission</h3>
+      <p>Deliver fast, fair, and firm recovery solutions tailored to client needs while upholding legal compliance.</p>
     </div>
-    <div class="box">
-      <h3>Microfinance Debt Recovery</h3>
-      <p>Involves collecting outstanding loans from borrowers. Key aspects include.</p>
-       <ul>
-                <li>Efficient recovery of microfinance loans.</li>
-                <li>Professional negotiation with clients for repayments.</li>
-                <li>Empathetic approach to ensure minimal impact on clients' financial well-being.</li>
-            </ul>
+    <div class="ribbon-box reveal-box from-left">
+      <i class="lnr lnr-briefcase icon-img"></i>
+      <h3>Our Expertise</h3>
+      <p>Specialized in diverse sectors like banking, telecom, and retail with expert negotiators and legal teams.</p>
+    </div>
+    <div class="ribbon-box reveal-box from-right">
+      <i class="lnr lnr-user icon-img"></i>
+      <h3>Professionalism</h3>
+      <p>Our agents are trained to handle every case with integrity, diplomacy, and a results-oriented mindset.</p>
+    </div>
+    <div class="ribbon-box reveal-box from-right" >
+      <i class="lnr lnr-thumbs-up icon-img"></i>
+      <h3>Client Satisfaction</h3>
+      <p>We prioritize client feedback and strive for 100% satisfaction with tailored strategies and timely updates.</p>
+    </div>
+    <div class="ribbon-box reveal-box from-right" >
+      <i class="lnr lnr-lock icon-img"></i> <!-- previously was lnr-balance (nonexistent) -->
+      <h3>Integrity</h3>
+      <p>Our foundation is built on honesty and ethical conduct to maintain client trust and legal standing.</p>
     </div>
   </div>
 </section>
-  <hr class="section-divider" />
-  <section>
-  <h2 class="section-title">About Allfinno</h2>
-  <div class="graphic-grid">
-  <div class="gbox">
-<i class="icon">👁️</i>
-    <h3>Our Vision</h3>
-    <p>We aim to provide the best debt recovery services with a focus on professionalism, integrity, and client satisfaction.</p>
+    
+ <section class="story-section">
+  <div class="story-box reveal-box from-bittom">
+    <h2><i class="fas fa-quote-left"></i> Our Story</h2>
+    <p>
+      At <strong>Allfinno Capital Solutions</strong>, our story began with a commitment to revolutionize debt recovery through professionalism and empathy. 
+      We believe every financial challenge has a human story behind it. Our mission is to bridge understanding between lenders and borrowers, 
+      using technology and a dedicated support team to ensure resolutions that are fair, respectful, and effective. 
+      With each case, we strive not just to recover dues—but to rebuild trust.<br>
+    Many businesses face delayed payments that can seriously impact their operations. Professional debt recovery ensures you can focus on running your business while experts handle sensitive financial follow-ups with efficiency and respect. Whether you’re a small business or a large company, recovering what you're owed is not just about money — it's about sustaining your hard work and growth.
+    </p>
   </div>
-  <div class="gbox">
-<i class="icon">🎯</i>
-    <h3>Our Mission</h3>
-    <p>Our mission is to recover debts efficiently and ethically while maintaining strong relationships with our clients.</p>
+</section>
+<section class="recovery-counter-section reveal-box from-bottom">
+  <div class="counter-box">
+    <h2><span class="counter" data-target="5000">0</span>+ NPA Accounts</h2>
+    <p>Recoveries in the Past 6 Months</p>
   </div>
-  <div class="gbox">
-<i class="icon">💡</i>
-    <h3>Our Expertise</h3>
-    <p>With years of experience in debt recovery, our team possesses the knowledge and skills to handle various types of debt recovery cases.</p>
-  </div>
-  <div class="gbox">
-<i class="icon">💼</i>
-    <h3>Professionalism</h3>
-    <p>We prioritize professionalism in every case, ensuring that our approach is fair, transparent, and respectful of all parties involved.</p>
-  </div>
-  <div class="gbox">
-<i class="icon">😊</i>
-    <h3>Client Satisfaction</h3>
-    <p>We strive to exceed client expectations by offering tailored debt recovery solutions with a high success rate.
-</p>
-  </div>
-  <div class="gbox">
-<i class="icon">🤝</i>
-    <h3>Integrity</h3>
-    <p> Our team upholds the highest standards of integrity, ensuring that all debt recovery operations are conducted ethically.</p>
-  </div>
-  </div>
-</section>  
-<script src="js/script.js"></script>
-<script src="script.js"></script>
-  
+</section>
+    
  <footer class="footer">
-  <div class="footer-links">
+  <!-- Middle: Footer Links -->
+  <div class="footer-container">
     <div class="footer-column">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="tele.html">Tele Calling</a></li>
-        <li><a href="support.html">Customer Support</a></li>
-      </ul>
+      <h4>Services</h4>
+      <a href="tele.html">Tele Calling</a>
+      <a href="support.html">Customer Support</a>
     </div>
     <div class="footer-column">
-      <h3>Our Company</h3>
-      <ul>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
+      <h4>Our Company</h4>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-column">
-      <h3>Legal</h3>
-      <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Conditons</a></li>
-      </ul>
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
     </div>
     <div class="footer-column">
-      <h3>Contact Us</h3>
-     <ul>
-        <li><i class="fas fa-globe"></i> <a href="https://allfinno.com"> www.allfinno.com</a></li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:business@allfinno.com"> business@allfinno.com</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> 862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</li>
-    </ul>
+      <h4>Contact Us</h4>
+    <a href="mailto:business@allfinno.com"> <i class="fas fa-envelope"></i>business@allfinno.com</a>
+   <a><i class="fas fa-map-marker-alt"></i>862, Prabhat Arcade, 3rd Floor, 80 Feet Rd, 8th Block Opp: Koramangala Indoor Stadium Back Gate, Bengaluru, Karnataka 560095</a>
     </div>
   </div>
-<hr class="footer-divider" />
-<div class="footer-social">
-  <ul>
-    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-  </ul>
-</div>
+     <hr>
+  <!-- Top: Social Media Icons -->
+  <div class="footer-socials">
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <!-- Bottom: Copyright -->
+  <div class="footer-bottom">
+    © 2025 Allfinno Capital Solutions. All rights reserved.
+  </div>
+ <script>
+  function revealOnScroll() {
+    const boxes = document.querySelectorAll('.reveal-box');
+    const triggerBottom = window.innerHeight * 0.9;
 
-  <p class="footer-rights">© 2025 Allfinno Capital Solutions. All rights reserved.</p>
+    boxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top;
+
+      if (boxTop < triggerBottom) {
+        box.classList.add('active');
+      } else {
+        box.classList.remove('active'); // reset if needed
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+     <script src="js/script.js"></script>
+<button id="backToTop" title="Back to Top">
+  <svg class="circle" width="50" height="50">
+    <circle cx="25" cy="25" r="22" stroke-width="4" />
+  </svg>
+  ⬆
+</button>
 </footer>
-</body>
+    </body>
 </html>
